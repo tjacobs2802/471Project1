@@ -2,7 +2,7 @@
 [Click here for our audio file](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## Group Members
-* Trevor Jacobs -
+* Trevor Jacobs - Piano Developer
 * Greg Lis -
 * Julia Bishop -
 * Aidan Baird -
