@@ -5,7 +5,7 @@
 * Trevor Jacobs - Piano Developer
 * Greg Lis -
 * Julia Bishop -
-* Aidan Baird -
+* Aidan Baird - WaveTable synthesizer
 
 ## Navigation
 * Piano
