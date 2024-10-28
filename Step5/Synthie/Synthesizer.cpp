@@ -2,6 +2,10 @@
 #include "Synthesizer.h"
 #include "Instrument.h"
 #include "ToneInstrument.h"
+#include "CFactory.h"
+#include "CCompressor.h"
+#include "CChorus.h"
+#include "CFlange.h"
 #include "xmlhelp.h"
 #include <vector>
 #include <algorithm>
@@ -15,7 +19,11 @@ CSynthesizer::CSynthesizer()
 	m_samplePeriod = 1 / m_sampleRate;
 	m_bpm = 120;            
 	m_beatspermeasure = 4;
-	m_secperbeat = 0.5;     
+	m_secperbeat = 0.5; 
+
+	// JULIA TRYING SOMETHING
+	m_effects = std::vector<std::shared_ptr<CEffect>>();
+	//
 }
 
 
