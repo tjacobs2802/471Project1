@@ -15,7 +15,7 @@
 
 ## Project Information
 ### Score File
-Stuff things, things and stuff
+Stuff things, things and stuff, fight2.xml below
 
 ```xml
 
