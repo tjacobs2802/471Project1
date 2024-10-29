@@ -38,7 +38,9 @@ public:
 	void OpenScore(CString & );
 	void XmlLoadScore(IXMLDOMNode * xml);
 	void XmlLoadInstrument(IXMLDOMNode * xml);
-	void XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument);
+	void XmlLoadEffectList(IXMLDOMNode* xml);
+	void AddEffect(std::shared_ptr<CEffect> effect);
+	void XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument, std::wstring& effect);
 private:
 	int		m_channels;
 	double	m_sampleRate;

@@ -1,17 +1,20 @@
 #include "stdafx.h"
 #include "CFlange.h"
 #include <cmath>
+#include <deque>
+
+std::deque<double> m_frameHistory;
 
 CFlange::CFlange(int channels, double sampleRate, double samplePeriod) : CEffect(channels, sampleRate, samplePeriod)
 {
 	m_phase = 0;
-	m_frequency = 1;
+	m_frequency = 0.25;
 	m_amplitude = 1;
 
 	Reset();
 
-	m_feedback = 0.5;
-	m_wetness = 0.5;
+	m_feedback = 0.7;
+	m_wetness = 0.8;
 }
 
 CFlange::~CFlange()
@@ -21,29 +24,26 @@ CFlange::~CFlange()
 
 void CFlange::Process(const double* frameIn, double* frameOut, const double& time)
 {
-	const double waveform = m_amplitude * sin(m_phase * 2 * PI);
+	const double modulation = sin(m_phase * 2 * PI);
 	m_phase += m_frequency * m_samplePeriod;
-	const int delay = int(0.01 * m_sampleRate + 0.5);
+	if (m_phase > 2 * PI) m_phase -= 2 * PI;
 
+	int delay = int((0.005 + m_amplitude * (modulation + 1)) * m_sampleRate);
+
+	// Push current frame into history with feedback
 	for (size_t i = 0; i < m_channels; i++)
 	{
-		m_frameHistory.push(frameIn[i] * waveform * m_feedback +
-			frameIn[i] * (1 - m_feedback));
-	}
+		double delayedSample = (m_frameHistory.size() > delay * m_channels)
+			? m_frameHistory[m_frameHistory.size() - delay * m_channels]
+			: frameIn[i];
 
-	for (size_t c = 0; c < m_channels; c++)
-	{
-		if (delay * m_channels <= m_frameHistory.size())
-		{
+		m_frameHistory.push_back(frameIn[i] + delayedSample * m_feedback);
 
-			frameOut[c] = m_frameHistory.front() * m_wetness +
-				frameIn[c] * (1 - m_wetness);
-			m_frameHistory.pop();
-		}
-		else
-		{
-			frameOut[c] = frameIn[c];
-		}
+		if (m_frameHistory.size() > delay * m_channels)
+			m_frameHistory.pop_front();
+
+		// Mix wet and dry signals
+		frameOut[i] = (1 - m_wetness) * frameIn[i] + m_wetness * delayedSample;
 	}
 }
 
@@ -78,7 +78,8 @@ void CFlange::XmlLoadAttribute(const ATL::CComBSTR& name, ATL::CComVariant& valu
 
 void CFlange::Reset()
 {
+	m_frameHistory.clear();
 	m_delayIndex = 0;
 	m_bufferIndex = 0;
-	m_frameHistory = std::queue<double>();
+
 }

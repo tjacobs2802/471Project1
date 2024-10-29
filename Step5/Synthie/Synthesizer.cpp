@@ -4,11 +4,14 @@
 #include "ToneInstrument.h"
 #include "CFactory.h"
 #include "CCompressor.h"
+#include "CNoiseGate.h"
 #include "CChorus.h"
 #include "CFlange.h"
 #include "xmlhelp.h"
 #include <vector>
 #include <algorithm>
+#include <iostream>
+
 
 CSynthesizer::CSynthesizer()
 : m_time(0)
@@ -99,10 +102,19 @@ bool CSynthesizer::Generate(double * frame)
 			instrument->SetNote(note);
 			instrument->Start();
 
+			const std::wstring effectID = note->EffectID();
+			if (effectID.length() > 0)
+			{
+				instrument->m_effectID = effectID;
+			}
+
+
 			m_instruments.push_back(instrument);
 		}
 
 		m_currentNote++;
+
+
 	}
 	//
 	// Phase 2: Clear all channels to silence 
@@ -143,6 +155,26 @@ bool CSynthesizer::Generate(double * frame)
 			{
 				frame[c] += instrument->Frame(c);
 			}
+			// julia trying
+			if (instrument->m_effectID.length() > 0)
+			{
+				double* frameout = (double*)calloc(m_channels, sizeof(double));
+				m_effectCatalog[instrument->m_effectID]->Process(frame, frameout, m_time);
+				auto effect = m_effectCatalog[instrument->m_effectID];
+
+				if (effect)
+				{
+					effect->Process(frame, frameout, m_time);
+
+					for (int c = 0; c < GetNumChannels(); c++)
+					{
+						frame[c] = frameout[c] * effect->m_gain;
+					}
+				}
+
+				free(frameout);
+			}
+			// done
 		}
 		else
 		{
@@ -193,6 +225,8 @@ double CSynthesizer::GetTime()
 }
 void CSynthesizer::Clear()
 {
+	m_effects.clear();
+	m_effectCatalog.clear();
 	m_instruments.clear();
 	m_notes.clear();
 }
@@ -250,6 +284,10 @@ void CSynthesizer::XmlLoadScore(IXMLDOMNode * xml)
 		{
 			XmlLoadInstrument(node);
 		}
+		else if (name == "effects")
+		{
+			XmlLoadEffectList(node);
+		}
 	}
 }
 void CSynthesizer::OpenScore(CString & filename)
@@ -300,6 +338,7 @@ void CSynthesizer::OpenScore(CString & filename)
 void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 {
 	wstring instrument = L"";
+	wstring effect = L"";
 
 	// Get a list of all attribute nodes and the
 	// length of that list
@@ -327,8 +366,13 @@ void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 		{
 			instrument = value.bstrVal;
 		}
+		else if (name == "effect")
+		{
+			effect = value.bstrVal;
+		}
 	}
 
+	std::wcout << L"Instrument: " << instrument << L", Effect: " << effect << L"\n";
 
 	CComPtr<IXMLDOMNode> node;
 	xml->get_firstChild(&node);
@@ -340,13 +384,31 @@ void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 
 		if (name == L"note")
 		{
-			XmlLoadNote(node, instrument);
+			XmlLoadNote(node, instrument, effect);
 		}
 	}
 
 }
-void CSynthesizer::XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument)
+
+void CSynthesizer::XmlLoadEffectList(IXMLDOMNode* xml)
+{
+	CFactory effFactory(m_channels, m_sampleRate, m_samplePeriod);
+	auto effects = effFactory.XmlLoadEffects(xml);
+
+	for each (auto eff in effects)
+	{
+		AddEffect(eff);
+		std::wcout << L"Loaded effect with ID: " << eff->m_id << L"\n";
+	}
+}
+void CSynthesizer::XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument, std::wstring& effect)
 {
 	m_notes.push_back(CNote());
-	m_notes.back().XmlLoad(xml, instrument);
+	m_notes.back().XmlLoad(xml, instrument, effect);
+}
+
+void CSynthesizer::AddEffect(std::shared_ptr<CEffect> effect)
+{
+	m_effects.push_back(effect);
+	m_effectCatalog[effect->m_id] = effect;
 }

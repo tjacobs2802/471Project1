@@ -89,7 +89,8 @@
     <Link>
       <AdditionalDependencies>msxml2.lib;amstrmid.lib;quartz.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>
+      </SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
@@ -119,10 +120,17 @@
     <Link>
       <AdditionalDependencies>msxml2.lib;amstrmid.lib;quartz.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>
+      </SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Link>
+      <SubSystem>
+      </SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -137,6 +145,7 @@
     <ClCompile Include="CEffectsManager.cpp" />
     <ClCompile Include="CFactory.cpp" />
     <ClCompile Include="CFlange.cpp" />
+    <ClCompile Include="CNoiseGate.cpp" />
     <ClCompile Include="CPianoInstrument.cpp" />
     <ClCompile Include="Instrument.cpp" />
     <ClCompile Include="MainFrm.cpp" />
@@ -169,6 +178,7 @@
     <ClInclude Include="CEffectsManager.h" />
     <ClInclude Include="CFactory.h" />
     <ClInclude Include="CFlange.h" />
+    <ClInclude Include="CNoiseGate.h" />
     <ClInclude Include="CPianoInstrument.h" />
     <ClInclude Include="Instrument.h" />
     <ClInclude Include="MainFrm.h" />
