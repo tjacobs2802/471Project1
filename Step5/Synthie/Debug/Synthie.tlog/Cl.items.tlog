@@ -1,28 +1,29 @@
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\AR.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\AR.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\AudioNode.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\AudioNode.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\audio\DirSound.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\DirSound.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\audio\DirSoundSource.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\DirSoundSource.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\audio\DirSoundStream.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\DirSoundStream.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\CChorus.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\CChorus.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\CCompressor.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\CCompressor.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\CEffect.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\CEffect.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\CEffectsManager.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\CEffectsManager.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\CFactory.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\CFactory.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\CFlange.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\CFlange.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\CNoiseGate.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\CNoiseGate.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\CPianoInstrument.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\CPianoInstrument.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Instrument.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\Instrument.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\MainFrm.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\MainFrm.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Note.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\Note.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Notes.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\Notes.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Progress.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\Progress.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\ProgressDlg.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\ProgressDlg.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\SineWave.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\SineWave.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\stdafx.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\stdafx.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Synthesizer.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\Synthesizer.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Synthie.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\Synthie.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\SynthieView.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\SynthieView.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\audio\Wave.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\Wave.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\audio\WaveformBuffer.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\WaveformBuffer.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\audio\WaveformWnd.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\WaveformWnd.obj
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\ToneInstrument.cpp;C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\Debug\ToneInstrument.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\AR.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\AR.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\AudioNode.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\AudioNode.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\audio\DirSound.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\DirSound.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\audio\DirSoundSource.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\DirSoundSource.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\audio\DirSoundStream.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\DirSoundStream.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\CChorus.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\CChorus.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\CCompressor.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\CCompressor.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\CDrumInstrument.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\CDrumInstrument.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\CEffect.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\CEffect.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\CEffectsManager.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\CEffectsManager.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\CFactory.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\CFactory.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\CFlange.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\CFlange.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\CNoiseGate.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\CNoiseGate.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\CPianoInstrument.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\CPianoInstrument.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\Instrument.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\Instrument.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\MainFrm.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\MainFrm.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\Note.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\Note.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\Notes.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\Notes.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\Progress.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\Progress.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\ProgressDlg.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\ProgressDlg.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\SineWave.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\SineWave.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\stdafx.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\stdafx.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\Synthesizer.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\Synthesizer.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\Synthie.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\Synthie.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\SynthieView.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\SynthieView.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\audio\Wave.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\Wave.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\audio\WaveformBuffer.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\WaveformBuffer.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\audio\WaveformWnd.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\WaveformWnd.obj
+\\Mac\Home\Desktop\471Project1\Step5\Synthie\ToneInstrument.cpp;\\Mac\Home\Desktop\471Project1\Step5\Synthie\Debug\ToneInstrument.obj

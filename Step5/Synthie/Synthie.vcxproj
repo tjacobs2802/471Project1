@@ -141,6 +141,7 @@
     <ClCompile Include="audio\DirSoundStream.cpp" />
     <ClCompile Include="CChorus.cpp" />
     <ClCompile Include="CCompressor.cpp" />
+    <ClCompile Include="CDrumInstrument.cpp" />
     <ClCompile Include="CEffect.cpp" />
     <ClCompile Include="CEffectsManager.cpp" />
     <ClCompile Include="CFactory.cpp" />
@@ -174,6 +175,7 @@
     <ClInclude Include="audio\DirSoundStream.h" />
     <ClInclude Include="CChorus.h" />
     <ClInclude Include="CCompressor.h" />
+    <ClInclude Include="CDrumInstrument.h" />
     <ClInclude Include="CEffect.h" />
     <ClInclude Include="CEffectsManager.h" />
     <ClInclude Include="CFactory.h" />
