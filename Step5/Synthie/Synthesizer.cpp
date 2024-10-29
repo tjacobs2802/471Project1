@@ -13,6 +13,8 @@
 #include <algorithm>
 #include <iostream>
 
+#include "CDrumInstrument.h"
+
 
 CSynthesizer::CSynthesizer()
 : m_time(0)
@@ -94,6 +96,10 @@ bool CSynthesizer::Generate(double * frame)
 		if (note->Instrument() == L"ToneInstrument")
 		{
 			instrument = new CToneInstrument(GetBeatsPerMinute());
+		}
+		if (note->Instrument() == L"DrumInstrument")
+		{
+			instrument = new CDrumInstrument(GetBeatsPerMinute());
 		}
 		else if (note->Instrument() == L"PianoInstrument") {
 			instrument = new CPianoInstrument(GetBeatsPerMinute());
