@@ -14,5 +14,14 @@ Envelopes simulates what happens whne a key is released by not just cutting
 off the sound, rather by dampening it.
 
 ## 3.) Pedal Simulation
-An acoustic piano has a pedal
-## 3.) Dynamics (basic and advanced)
+An acoustic piano has a pedal. When pressed, the pedal allows you to play notes for their full duration. The score will determine if pedal is pressed.
+
+## 4.) Pedal Noise
+Like a real piano, the pedal makes a noise as it's pressed and released.
+
+## 5.) Dynamics (basic and advanced)
+The samples allow for the piano to be loud and soft, like an actual piano. The program implements how loud or soft notes are played based on the score.
+
+```xml
+
+```
