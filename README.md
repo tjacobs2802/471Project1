@@ -8,7 +8,7 @@
 * Aidan Baird - WaveTable synthesizer
 
 ## Navigation
-* Piano
+* [Piano](./ComponentsPages/Piano.md)
 * 
 * Effects
 *
