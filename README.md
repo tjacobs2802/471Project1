@@ -4,7 +4,7 @@
 ## Group Members
 * Trevor Jacobs - Piano Developer
 * Greg Lis -
-* Julia Bishop -
+* Julia Bishop - Effects Component
 * Aidan Baird - WaveTable synthesizer
 
 ## Navigation
