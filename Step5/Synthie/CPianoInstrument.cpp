@@ -1,13 +1,15 @@
 #include "stdafx.h"
 #include "CPianoInstrument.h"
 #include <string>
+#include <stdexcept>
 #include <fstream>
+#include <iostream>
 
 
 CPianoInstrument::CPianoInstrument(double bpm) : CInstrument(bpm), m_sampleIndex(0), m_time(0) {
     // Load samples here
     // Example: LoadSample(60, "path/to/sample.wav"); // Load middle C
-	CPianoInstrument::LoadSample(60, "media\CompletePiano\C4s");
+	CPianoInstrument::LoadSample(1, "../media/CompletePiano/C4s.wav");
 }
 
 CPianoInstrument::~CPianoInstrument() {
@@ -30,10 +32,42 @@ bool CPianoInstrument::Generate() {
 }
 
 void CPianoInstrument::SetNote(CNote* note) {
-    int midiNote = note->Measure(); // Assuming Measure() returns MIDI note number
-    if (m_samples.find(midiNote) != m_samples.end()) {
-        m_currentSample = m_samples[midiNote];
-        m_duration = note->Beat(); // Assuming Beat() returns duration in seconds
+    CComPtr<IXMLDOMNamedNodeMap> attributes;
+    note->Node()->get_attributes(&attributes);
+    long len;
+    attributes->get_length(&len);
+
+    for (int i = 0; i < len; i++) {
+        CComPtr<IXMLDOMNode> attrib;
+        attributes->get_item(i, &attrib);
+
+        // Get the attribute name and value
+        CComBSTR name;
+        attrib->get_nodeName(&name);
+
+        CComVariant value;
+        attrib->get_nodeValue(&value);
+
+        if (name == "duration") {
+            value.ChangeType(VT_R8);  // Convert to double
+            m_duration = value.dblVal * (NUM_SECS_IN_MINUTE / m_bpm);  // Set duration in seconds
+        }
+        else if (name == "piano") {  // Check for drum type
+            value.ChangeType(VT_I4);  // Convert to integer
+            int pianoType = value.intVal;
+
+            // Check if the drum type exists in the sample map
+            if (m_samples.find(pianoType) != m_samples.end()) {
+                // Set the current sample based on the drum type
+                m_currentSample = m_samples[pianoType];
+                m_sampleIndex = 0;  // Reset sample index to start from the beginning
+            }
+            else {
+                // Handle invalid drum type
+                std::cerr << "Warning: Invalid piano type: " << pianoType << std::endl;
+                throw std::runtime_error("Invalid piano type: " + std::to_string(pianoType));
+            }
+        }
     }
 }
 
