@@ -2,6 +2,7 @@
 #include "Synthesizer.h"
 #include "Instrument.h"
 #include "ToneInstrument.h"
+#include "CPianoInstrument.h"
 #include "CFactory.h"
 #include "CCompressor.h"
 #include "CNoiseGate.h"
@@ -93,6 +94,9 @@ bool CSynthesizer::Generate(double * frame)
 		if (note->Instrument() == L"ToneInstrument")
 		{
 			instrument = new CToneInstrument(GetBeatsPerMinute());
+		}
+		else if (note->Instrument() == L"PianoInstrument") {
+			instrument = new CPianoInstrument(GetBeatsPerMinute());
 		}
 
 		// Configure the instrument object

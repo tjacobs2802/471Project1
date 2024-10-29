@@ -7,7 +7,7 @@
 CPianoInstrument::CPianoInstrument(double bpm) : CInstrument(bpm), m_sampleIndex(0), m_time(0) {
     // Load samples here
     // Example: LoadSample(60, "path/to/sample.wav"); // Load middle C
-	CPianoInstrument::LoadSample(60, "path/to/sample.wav");
+	CPianoInstrument::LoadSample(60, "media\CompletePiano\C4s");
 }
 
 CPianoInstrument::~CPianoInstrument() {
