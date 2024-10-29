@@ -7,8 +7,9 @@
 CDrumInstrument::CDrumInstrument(double bpm)
     : CInstrument(bpm), m_sampleIndex(0), m_time(0) {
     // Load drum samples (example: kick = 1, snare = 2)
-    LoadDrumSample(1, "../media/CompleteDrum/kick-big.wav");
-    LoadDrumSample(2, "../media/CompleteDrum/snare-808.wav");
+    LoadDrumSample(1, "../media/CompleteDrum/kick1.wav");
+    LoadDrumSample(2, "../media/CompleteDrum/snare1.wav");
+    LoadDrumSample(3, "../media/CompleteDrum/kick2.wav");
 }
 
 CDrumInstrument::~CDrumInstrument() {}

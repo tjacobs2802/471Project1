@@ -1,6 +1,3 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  CPianoInstrument.cpp
-C:\Users\tjaco\source\repos\cse471\project1_3.0\Step5\Synthie\CPianoInstrument.cpp(248,18): warning C4244: 'initializing': conversion from 'DOUBLE' to 'int', possible loss of data
-  (compiling source file '/CPianoInstrument.cpp')
-  
-  Synthie.vcxproj -> C:\Users\tjaco\source\repos\cse471\project1_3.0\Step5\Debug\Synthie.exe
+  CDrumInstrument.cpp
+  Synthie.vcxproj -> \\Mac\Home\Desktop\471Project1\Step5\Debug\Synthie.exe

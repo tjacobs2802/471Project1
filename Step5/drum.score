@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<score bpm="60" beatspermeasure="4">
+<score bpm="120" beatspermeasure="4">
    <instrument instrument="DrumInstrument">
       <!-- Drum notes mapped as integers -->
       <note measure="1" beat="1" duration="1.9" drum="1"/>  <!-- Kick Drum -->
+      <note measure="1" beat="2" duration="1.9" drum="3"/>  <!-- Kick Drum -->
+      <note measure="1" beat="3" duration="1.9" drum="1"/>  <!-- Kick Drum -->
       <note measure="1" beat="3" duration="1.9" drum="2"/>  <!-- Snare Drum -->
+      <note measure="1" beat="4" duration="1.9" drum="3"/>  <!-- Kick Drum -->
       <note measure="2" beat="1" duration="3.7" drum="1"/>  <!-- Kick Drum -->
+      <note measure="2" beat="2" duration="3.7" drum="3"/>  <!-- Kick Drum -->
+      <note measure="2" beat="3" duration="3.7" drum="1"/>  <!-- Kick Drum -->
+      <note measure="2" beat="3" duration="3.7" drum="2"/>  <!-- Kick Drum -->
+      <note measure="2" beat="4" duration="3.7" drum="3"/>  <!-- Kick Drum -->
+      <note measure="2" beat="4.5" duration="0.25" drum="2"/> <!-- Snare Drum -->
       <note measure="2" beat="4.75" duration="0.25" drum="2"/> <!-- Snare Drum -->
-      <note measure="2" beat="4.75" duration="0.25" drum="2"/> <!-- Snare Drum -->
-      <note measure="2" beat="4.75" duration="0.25" drum="2"/> <!-- Snare Drum -->
-      <note measure="3" beat="1.25" duration="4.75" drum="1"/> <!-- Kick Drum -->
-      <note measure="3" beat="1.25" duration="4.75" drum="2"/> <!-- Snare Drum -->
-      <note measure="3" beat="1.25" duration="4.75" drum="2"/> <!-- Snare Drum -->
+      <note measure="2" beat="4.5" duration="0.25" drum="3"/> <!-- Snare Drum -->
+      <note measure="3" beat="1" duration="4.75" drum="1"/> <!-- Kick Drum -->
+      <note measure="3" beat="1" duration="4.75" drum="2"/> <!-- Snare Drum -->
+      <note measure="3" beat="1" duration="4.75" drum="3"/> <!-- Snare Drum -->
    </instrument>
 </score>
