@@ -3,15 +3,15 @@
 
 ## Group Members
 * Trevor Jacobs - Piano Synthesizer
-* Greg Lis -
+* Greg Lis - Drum Synthesizer
 * Julia Bishop - Effects Component
 * Aidan Baird - WaveTable synthesizer
 
 ## Navigation
 * [Piano](./Piano.md)
+* [Drums](./Drums.md)
+* [Effects](./Effects.md)
 * [WaveTable Synth](./WaveTable.md)
-* Effects
-*
 
 ## Project Information
 ### Score File
