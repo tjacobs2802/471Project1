@@ -9,5 +9,11 @@ public:
 	CInstrument(double);
 	virtual ~CInstrument();
 	virtual void SetNote(CNote *note) = 0;
+
+	// Julia TRYING
+
+	std::wstring m_effectID = std::wstring();
+
+	//
 };
 

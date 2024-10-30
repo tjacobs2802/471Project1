@@ -5,6 +5,7 @@
 
 class CPianoInstrument : public CInstrument {
 public:
+    const double NUM_SECS_IN_MINUTE = 60.0;
     CPianoInstrument(double bpm);
     virtual ~CPianoInstrument();
 

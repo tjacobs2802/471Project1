@@ -78,6 +78,27 @@
     <ClCompile Include="CPianoInstrument.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CEffectsManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CChorus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCompressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CFlange.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CNoiseGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audio\DirSound.h">
@@ -150,6 +171,27 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CPianoInstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CEffectsManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CChorus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCompressor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CFlange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CNoiseGate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

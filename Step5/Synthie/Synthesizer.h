@@ -1,10 +1,15 @@
 using namespace std;
 #pragma once
 #include <list>
+#include <string>
 #include <vector>
+#include <memory>
 #include "msxml2.h"
 #include "Instrument.h"
 #include "Note.h"
+#include "CEffect.h"
+#include <map>
+
 class CSynthesizer
 {
 public:
@@ -33,7 +38,9 @@ public:
 	void OpenScore(CString & );
 	void XmlLoadScore(IXMLDOMNode * xml);
 	void XmlLoadInstrument(IXMLDOMNode * xml);
-	void XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument);
+	void XmlLoadEffectList(IXMLDOMNode* xml);
+	void AddEffect(std::shared_ptr<CEffect> effect);
+	void XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument, std::wstring& effect);
 private:
 	int		m_channels;
 	double	m_sampleRate;
@@ -44,6 +51,15 @@ private:
 	int m_currentNote;          //!< The current note we are playing
 	int m_measure;              //!< The current measure
 	double m_beat;              //!< The current beat within the measure
+
+
+	// JULIA- TRYING SOMETHING BELOW:
+
+	std::vector<std::shared_ptr<CEffect>> m_effects;
+	std::map<std::wstring, std::shared_ptr<CEffect>> m_effectCatalog;
+
+	// 
+
 	std::list<CInstrument *>  m_instruments;
 	std::vector<CNote> m_notes;
 public:

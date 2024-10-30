@@ -89,7 +89,8 @@
     <Link>
       <AdditionalDependencies>msxml2.lib;amstrmid.lib;quartz.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>
+      </SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
@@ -119,10 +120,17 @@
     <Link>
       <AdditionalDependencies>msxml2.lib;amstrmid.lib;quartz.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>
+      </SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Link>
+      <SubSystem>
+      </SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -131,6 +139,14 @@
     <ClCompile Include="audio\DirSound.cpp" />
     <ClCompile Include="audio\DirSoundSource.cpp" />
     <ClCompile Include="audio\DirSoundStream.cpp" />
+    <ClCompile Include="CChorus.cpp" />
+    <ClCompile Include="CCompressor.cpp" />
+    <ClCompile Include="CDrumInstrument.cpp" />
+    <ClCompile Include="CEffect.cpp" />
+    <ClCompile Include="CEffectsManager.cpp" />
+    <ClCompile Include="CFactory.cpp" />
+    <ClCompile Include="CFlange.cpp" />
+    <ClCompile Include="CNoiseGate.cpp" />
     <ClCompile Include="CPianoInstrument.cpp" />
     <ClCompile Include="Instrument.cpp" />
     <ClCompile Include="MainFrm.cpp" />
@@ -157,6 +173,14 @@
     <ClInclude Include="audio\DirSound.h" />
     <ClInclude Include="audio\DirSoundSource.h" />
     <ClInclude Include="audio\DirSoundStream.h" />
+    <ClInclude Include="CChorus.h" />
+    <ClInclude Include="CCompressor.h" />
+    <ClInclude Include="CDrumInstrument.h" />
+    <ClInclude Include="CEffect.h" />
+    <ClInclude Include="CEffectsManager.h" />
+    <ClInclude Include="CFactory.h" />
+    <ClInclude Include="CFlange.h" />
+    <ClInclude Include="CNoiseGate.h" />
     <ClInclude Include="CPianoInstrument.h" />
     <ClInclude Include="Instrument.h" />
     <ClInclude Include="MainFrm.h" />

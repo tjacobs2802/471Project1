@@ -2,13 +2,13 @@
 [Click here for our audio file](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## Group Members
-* Trevor Jacobs - Piano Developer
+* Trevor Jacobs - Piano Synthesizer
 * Greg Lis -
-* Julia Bishop -
+* Julia Bishop - Effects Component
 * Aidan Baird - WaveTable synthesizer
 
 ## Navigation
-* Piano
+* [Piano](./Piano.md)
 * 
 * Effects
 *
