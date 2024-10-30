@@ -2,7 +2,6 @@
 #include "CDrumInstrument.h"
 #include <fstream>
 #include <stdexcept>
-#include <iostream>  // For debugging output
 
 CDrumInstrument::CDrumInstrument(double bpm)
     : CInstrument(bpm), m_sampleIndex(0), m_time(0) {
@@ -68,18 +67,14 @@ void CDrumInstrument::LoadDrumSample(const std::wstring& drumName) {
 
     std::ifstream file(path, std::ios::binary);
     if (!file) {
-        std::cerr << "Failed to open file\n";
-        m_currentSample.clear();  // Set an empty sample in case of failure
-        return;
+        std::runtime_error("Failed to open file\n");
     }
 
     // Validate WAV header
     char riff[4];
     file.read(riff, 4);
     if (std::string(riff, 4) != "RIFF") {
-        std::cerr << "Invalid WAV file\n";
-        m_currentSample.clear();
-        return;
+        std::runtime_error("Invalid WAV file\n");
     }
 
     file.seekg(40, std::ios::beg);
