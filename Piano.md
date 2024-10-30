@@ -22,6 +22,9 @@ Like a real piano, the pedal makes a noise as it's pressed and released.
 ## 5.) Dynamics (basic and advanced)
 The samples allow for the piano to be loud and soft, like an actual piano. The program implements how loud or soft notes are played based on the score.
 
+
+## Sample Score
+Here is a sample score that was used to demo the piano's different capabilities
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <score bpm="60" beatspermeasure="4">
