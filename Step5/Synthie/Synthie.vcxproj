@@ -166,6 +166,8 @@
     <ClCompile Include="audio\WaveformBuffer.cpp" />
     <ClCompile Include="audio\WaveformWnd.cpp" />
     <ClCompile Include="ToneInstrument.cpp" />
+    <ClCompile Include="Waveform.cpp" />
+    <ClCompile Include="WaveTable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AR.h" />
@@ -199,6 +201,8 @@
     <ClInclude Include="audio\WaveformBuffer.h" />
     <ClInclude Include="audio\WaveformWnd.h" />
     <ClInclude Include="ToneInstrument.h" />
+    <ClInclude Include="Waveform.h" />
+    <ClInclude Include="WaveTable.h" />
     <ClInclude Include="xmlhelp.h" />
   </ItemGroup>
   <ItemGroup>

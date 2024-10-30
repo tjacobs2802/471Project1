@@ -99,6 +99,15 @@
     <ClCompile Include="CNoiseGate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CDrumInstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WaveTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Waveform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audio\DirSound.h">
@@ -192,6 +201,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CNoiseGate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CDrumInstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WaveTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Waveform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

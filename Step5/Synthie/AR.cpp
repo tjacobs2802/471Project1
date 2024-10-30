@@ -48,3 +48,18 @@ bool CAR::Generate()
 	// We return true until the time reaches the duration.
 	return m_time < m_duration;
 }
+
+double CAR::GetEnvelope() const {
+	if (m_time < m_attack) {
+		// Attack phase
+		return m_time / m_attack; // Linear increase
+	}
+	else if (m_time > m_duration - m_release) {
+		// Release phase
+		return (m_duration - m_time) / m_release; // Linear decrease
+	}
+	else {
+		// Sustain phase
+		return 1.0; // Full amplitude during sustain
+	}
+}

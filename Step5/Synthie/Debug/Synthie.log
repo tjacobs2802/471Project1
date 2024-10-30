@@ -1,1 +1,11 @@
-﻿  Synthie.vcxproj -> C:\Users\aidan\desktop\test\Step5\Debug\Synthie.exe
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  Waveform.cpp
+C:\Users\aidan\desktop\test\Step5\Synthie\Waveform.cpp(13,23): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/Waveform.cpp')
+  
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  ToneInstrument.cpp
+  Synthesizer.cpp
+AR.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  Synthie.vcxproj -> C:\Users\aidan\desktop\test\Step5\Debug\Synthie.exe

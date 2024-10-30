@@ -3,6 +3,7 @@
 #include "Instrument.h"
 #include "ToneInstrument.h"
 #include "CPianoInstrument.h"
+#include "Wavetable.h"
 #include "CFactory.h"
 #include "CCompressor.h"
 #include "CNoiseGate.h"
@@ -103,6 +104,9 @@ bool CSynthesizer::Generate(double * frame)
 		}
 		else if (note->Instrument() == L"PianoInstrument") {
 			instrument = new CPianoInstrument(GetBeatsPerMinute());
+		}
+		else if (note->Instrument() == L"WaveTable") {
+			instrument = new CWavetable();
 		}
 
 		// Configure the instrument object
