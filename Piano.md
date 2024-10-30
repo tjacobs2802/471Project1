@@ -28,38 +28,27 @@ Here is a sample score that was used to demo the piano's different capabilities
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <score bpm="60" beatspermeasure="4">
-	<instrument instrument="PianoInstrument">
-		<!-- Measure 1 -->
-		<note measure="1" beat="1" duration="1.9" piano="110"/>
-		<note measure="1" beat="1" duration="1.9" piano="175"/>
-		<note measure="1" beat="3" duration="1.9" piano="74"/>
-		
-		<!-- Measure 2 -->
-		<note measure="2" beat="1" duration="1.5" piano="152"/>
-		<note measure="2" beat="2" duration="1.5" piano="65"/>
-		<note measure="2" beat="3" duration="1.5" piano="180"/>
-		<note measure="2" beat="4" duration="1.0" piano="25"/>
-		
-		<!-- Measure 3 -->
-		<note measure="3" beat="1" duration="2.0" piano="92"/>
-		<note measure="3" beat="3" duration="1.9" piano="128"/>
-		<note measure="3" beat="3.5" duration="0.5" piano="156"/>
-		<note measure="3" beat="4" duration="1.0" piano="51"/>
-		
-		<!-- Measure 4 -->
-		<note measure="4" beat="1" duration="2.0" piano="10"/>
-		<note measure="4" beat="2.5" duration="1.5" piano="190"/>
-		<note measure="4" beat="3" duration="1.0" piano="75"/>
-		<note measure="4" beat="4" duration="1.0" piano="140"/>
-		
-		<!-- Measure 5 -->
-		<note measure="5" beat="1" duration="2.5" piano="56"/>
-		<note measure="5" beat="3.5" duration="1.5" piano="160"/>
-		<note measure="5" beat="4" duration="0.5" piano="95"/>
-		<note measure="5" beat="4.5" duration="0.5" piano="35"/>
-		
-		<!-- Measure 6 - Ending -->
-		<note measure="6" beat="1" duration="4.0" piano="111"/>
-	</instrument>
+    <instrument instrument="PianoInstrument">
+        <!-- Measure 1: G major chord -->
+        <note measure="1" beat="1" duration="4" piano="G3l"/>
+        <note measure="1" beat="1" duration="4" piano="B3l"/>
+        <note measure="1" beat="1" duration="4" piano="D4s"/>
+        
+        <!-- Measure 2: C major chord -->
+        <note measure="2" beat="1" duration="4" piano="C3l"/>
+        <note measure="2" beat="1" duration="4" piano="E3l"/>
+        <note measure="2" beat="1" duration="4" piano="G3s"/>
+        
+        <!-- Measure 3: D major chord -->
+        <note measure="3" beat="1" duration="4" piano="D3l"/>
+        <note measure="3" beat="1" duration="4" piano="F#3l"/>
+        <note measure="3" beat="1" duration="4" piano="A3s"/>
+        
+        <!-- Measure 4: G major chord (resolution) -->
+        <note measure="4" beat="1" duration="3" piano="G3l"/>
+        <note measure="4" beat="1" duration="3" piano="B3l"/>
+        <note measure="4" beat="1" duration="3" piano="D4s"/>
+    </instrument>
 </score>
+
 ```
