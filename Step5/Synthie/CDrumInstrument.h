@@ -16,6 +16,7 @@ public:
 
     virtual void Start() override;
     virtual bool Generate() override;
+    void GenerateSyntheticDrum();
     virtual void SetNote(CNote* note) override;
 
 private:

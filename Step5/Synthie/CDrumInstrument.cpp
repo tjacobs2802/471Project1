@@ -2,6 +2,7 @@
 #include "CDrumInstrument.h"
 #include <fstream>
 #include <stdexcept>
+#include <random>
 
 CDrumInstrument::CDrumInstrument(double bpm)
     : CInstrument(bpm), m_sampleIndex(0), m_time(0) {
@@ -31,6 +32,23 @@ bool CDrumInstrument::Generate() {
     return false;  // Stop generating when the sample finishes
 }
 
+void CDrumInstrument::GenerateSyntheticDrum() {
+    std::default_random_engine generator;
+    std::uniform_real_distribution<double> distribution(-1.0, 1.0);
+
+    m_currentSample.clear();
+    size_t numFrames = static_cast<size_t>(GetSampleRate() * 0.5);
+
+    for (size_t i = 0; i < numFrames; ++i) {
+        double noise = distribution(generator);
+
+        // Apply a quick decay to simulate a drum hit
+        double decay = 1.0 - (static_cast<double>(i) / numFrames);
+        double sample = noise * decay;
+
+        m_currentSample.push_back(sample);
+    }
+}
 
 
 void CDrumInstrument::SetNote(CNote* note) {
@@ -55,7 +73,13 @@ void CDrumInstrument::SetNote(CNote* note) {
         }
         else if (name == "drum") {
             std::wstring drumName = value.bstrVal;
-            LoadDrumSample(drumName);
+            if (drumName != L"synthetic") {
+                LoadDrumSample(drumName);
+            }
+            else {
+                GenerateSyntheticDrum();
+            }
+            
             m_sampleIndex = 0;
         }
     }

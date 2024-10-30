@@ -2,9 +2,7 @@
 <score bpm="60" beatspermeasure="4">
    <instrument instrument="DrumInstrument">
       <!-- Drum notes mapped as integers -->
-      <note measure="1" beat="1" duration="2" drum="kick1"/>
-      <note measure="1" beat="2" duration="2" drum="kick2"/>
-      <note measure="1" beat="3" duration="2" drum="snare1"/>
+      <note measure="1" beat="1" duration="2" drum="synthetic"/>
 
       <note measure="1" beat="4" duration="4" drum="kick1"/>
       <note measure="1" beat="4" duration="4" drum="kick2"/>
