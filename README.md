@@ -1,5 +1,5 @@
 # CSE 471 Project 1: Music Synthesizer
-[Click here for our audio file](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[Click here for our audio file: ***Dazed and Confused***](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## Group Members
 * Trevor Jacobs - Piano Synthesizer
@@ -15,7 +15,8 @@
 
 ## Project Information
 ### Score File
-Stuff things, things and stuff, fight2.xml below
+ To display all of the individual parts of the Music Synthesizer, we made a feature piece: ***Dazed and Confused***. Each note
+ is paird with an instrument, and each instrument might be paired with an effect. Here is the xml for our piece.
 
 ```xml
 
