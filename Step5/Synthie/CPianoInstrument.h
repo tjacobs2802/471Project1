@@ -1,5 +1,7 @@
 #pragma once
 #include "Instrument.h"
+#include "SineWave.h"
+#include "AR.h"
 #include <vector>
 #include <map>
 
@@ -12,7 +14,7 @@ public:
     virtual void Start() override;
     virtual bool Generate() override;
     virtual void SetNote(CNote* note) override;
-    void LoadSample(int midiNote, const std::string& filePath);
+    void LoadSample(const std::wstring& pianoName);
 
 private:
     std::map<int, std::vector<double>> m_samples; // Map MIDI note to audio samples
@@ -20,6 +22,9 @@ private:
     size_t m_sampleIndex;
     double m_duration;
     double m_time;
+
+    CSineWave   m_sinewave;
+    CAR m_ar;  // Attack/Release envelope generator
 };
 
 

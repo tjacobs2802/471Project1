@@ -77,7 +77,7 @@ void CDrumInstrument::SetNote(CNote* note) {
                 LoadDrumSample(drumName);
             }
             else {
-                GenerateSyntheticDrum();
+                GenerateSyntheticDrum();    
             }
             
             m_sampleIndex = 0;
