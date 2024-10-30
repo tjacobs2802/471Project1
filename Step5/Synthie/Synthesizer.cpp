@@ -172,13 +172,12 @@ bool CSynthesizer::Generate(double * frame)
 			// julia trying
 			if (instrument->m_effectID.length() > 0)
 			{
-				double* frameout = (double*)calloc(m_channels, sizeof(double));
-				m_effectCatalog[instrument->m_effectID]->Process(frame, frameout, m_time);
+				std::vector<double> frameout(m_channels, 0.0);
 				auto effect = m_effectCatalog[instrument->m_effectID];
 
 				if (effect)
 				{
-					effect->Process(frame, frameout, m_time);
+					effect->Process(frame, frameout.data(), m_time);
 
 					for (int c = 0; c < GetNumChannels(); c++)
 					{
@@ -186,7 +185,6 @@ bool CSynthesizer::Generate(double * frame)
 					}
 				}
 
-				free(frameout);
 			}
 			// done
 		}
