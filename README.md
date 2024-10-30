@@ -9,7 +9,7 @@
 
 ## Navigation
 * [Piano](./Piano.md)
-* 
+* [WaveTable Synth](./WaveTable.md)
 * Effects
 *
 
