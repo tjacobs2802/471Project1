@@ -35,7 +35,7 @@ void CFlange::Process(const double* frameIn, double* frameOut, const double& tim
 	{
 		double delayedSample = (m_frameHistory.size() > delay * m_channels)
 			? m_frameHistory[m_frameHistory.size() - delay * m_channels]
-			: 0;
+			: frameIn[i];
 
 		m_frameHistory.push_back(frameIn[i] + delayedSample * m_feedback);
 
