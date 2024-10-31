@@ -110,21 +110,16 @@ bool CSynthesizer::Generate(double * frame)
 		}
 
 		// Configure the instrument object
-		if (instrument != NULL)
-		{
+		if (instrument != nullptr) {
 			instrument->SetSampleRate(GetSampleRate());
 			instrument->SetNote(note);
 			instrument->Start();
-
-			const std::wstring effectID = note->EffectID();
-			if (effectID.length() > 0)
-			{
-				instrument->m_effectID = effectID;
+			if (!note->EffectID().empty()) {
+				instrument->m_effectID = note->EffectID();
 			}
-
-
 			m_instruments.push_back(instrument);
 		}
+
 
 		m_currentNote++;
 

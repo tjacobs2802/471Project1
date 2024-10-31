@@ -1,52 +1,36 @@
-c:\users\julia bishop\desktop\471project1\step5\debug\synthie.exe
-c:\users\julia bishop\desktop\471project1\step5\debug\synthie.pdb
-\\mac\home\desktop\471project1\step5\debug\synthie.exe
-\\mac\home\desktop\471project1\step5\debug\synthie.pdb
-c:\users\julia bishop\desktop\471project1\step5\synthie\debug\synthie.res
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.res
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.pch
-\\mac\home\desktop\471project1\step5\synthie\debug\vc143.pdb
-\\mac\home\desktop\471project1\step5\synthie\debug\vc143.idb
-\\mac\home\desktop\471project1\step5\synthie\debug\stdafx.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\cfactory.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\cflange.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\cnoisegate.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\cpianoinstrument.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\instrument.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\mainfrm.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\note.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\notes.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\progress.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\progressdlg.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\sinewave.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\synthesizer.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\synthieview.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\wave.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\waveformbuffer.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\waveformwnd.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\toneinstrument.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\waveform.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\wavetable.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\ar.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\audionode.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\dirsound.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\dirsoundsource.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\dirsoundstream.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\cchorus.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\ccompressor.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\cdruminstrument.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\ceffect.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\ceffectsmanager.obj
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.ilk
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.tlog\link.read.1.tlog
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.tlog\link.command.1.tlog
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.tlog\rc.command.1.tlog
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.tlog\link.write.1.tlog
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.tlog\cl.read.1.tlog
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.tlog\rc.write.1.tlog
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.tlog\link.secondary.1.tlog
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.tlog\cl.command.1.tlog
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.tlog\rc.read.1.tlog
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.tlog\cl.write.1.tlog
-\\mac\home\desktop\471project1\step5\synthie\debug\synthie.tlog\cl.items.tlog
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\synthie.pch
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\vc143.pdb
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\vc143.idb
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\stdafx.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\cfactory.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\cflange.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\cnoisegate.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\cpianoinstrument.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\instrument.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\mainfrm.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\note.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\notes.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\progress.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\progressdlg.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\sinewave.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\synthie.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\synthieview.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\wave.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\waveformbuffer.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\waveformwnd.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\toneinstrument.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\waveform.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\wavetable.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\ar.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\audionode.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\dirsound.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\dirsoundsource.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\dirsoundstream.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\cchorus.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\ccompressor.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\cdruminstrument.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\ceffect.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\ceffectsmanager.obj
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\synthie.tlog\cl.command.1.tlog
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\synthie.tlog\cl.read.1.tlog
+c:\users\julia bishop\desktop\471project1\step5\synthie\debug\synthie.tlog\cl.write.1.tlog

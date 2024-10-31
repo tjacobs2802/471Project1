@@ -3,19 +3,18 @@
 #include <memory>
 #include "CEffect.h"
 
-class CFactory
-{
-	// Constructors & Methods
+// CFactory class to create effects from XML nodes
+class CFactory {
 public:
-	CFactory() = delete;
+    CFactory() = delete;
 
-	CFactory(int channels, double sampleRate, double samplePeriod);
+    CFactory(int channels, double sampleRate, double samplePeriod);
 
-	std::vector<std::shared_ptr<CEffect>> XmlLoadEffects(IXMLDOMNode* xml);
+    std::vector<std::shared_ptr<CEffect>> XmlLoadEffects(IXMLDOMNode* xml);
 
 private:
-	int m_channels;
-	double m_sampleRate;
-	double m_samplePeriod;
+    int m_channels;
+    double m_sampleRate;
+    double m_samplePeriod;
 };
 

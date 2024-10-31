@@ -68,7 +68,6 @@ public:
 private:
 	double m_time;
 public:
-	// Get the time since we started generating audio
 	double GetTime();
 };
 

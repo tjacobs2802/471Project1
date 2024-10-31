@@ -13,7 +13,7 @@ CFlange::CFlange(int channels, double sampleRate, double samplePeriod) : CEffect
 
 	Reset();
 
-	m_feedback = 0.7;
+	m_feedback = 0.5;
 	m_wetness = 0.8;
 }
 
@@ -28,14 +28,14 @@ void CFlange::Process(const double* frameIn, double* frameOut, const double& tim
 	m_phase += m_frequency * m_samplePeriod;
 	if (m_phase > 2 * PI) m_phase -= 2 * PI;
 
-	int delay = int((0.005 + m_amplitude * (modulation + 1)) * m_sampleRate);
+	int delay = int((0.005 + m_amplitude * (modulation + 1)/2) * m_sampleRate);
 
 	// Push current frame into history with feedback
 	for (size_t i = 0; i < m_channels; i++)
 	{
 		double delayedSample = (m_frameHistory.size() > delay * m_channels)
 			? m_frameHistory[m_frameHistory.size() - delay * m_channels]
-			: frameIn[i];
+			: 0;
 
 		m_frameHistory.push_back(frameIn[i] + delayedSample * m_feedback);
 
