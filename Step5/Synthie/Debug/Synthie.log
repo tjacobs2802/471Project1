@@ -1,12 +1,3 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  CFlange.cpp
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\CFlange.cpp(34,23): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file '/CFlange.cpp')
-  
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\CFlange.cpp(36,49): warning C4018: '>': signed/unsigned mismatch
-  (compiling source file '/CFlange.cpp')
-  
-C:\Users\Julia Bishop\Desktop\471Project1\Step5\Synthie\CFlange.cpp(42,29): warning C4018: '>': signed/unsigned mismatch
-  (compiling source file '/CFlange.cpp')
-  
+  CCompressor.cpp
   Synthie.vcxproj -> C:\Users\Julia Bishop\Desktop\471Project1\Step5\Debug\Synthie.exe

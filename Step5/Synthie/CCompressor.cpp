@@ -33,7 +33,6 @@ void CCompressor::Process(const double* frameIn, double* frameOut, const double&
 			}
 			else
 			{
-				out = in;
 				m_times.at(c) = time;
 				phase = Attack;
 			}
@@ -41,35 +40,28 @@ void CCompressor::Process(const double* frameIn, double* frameOut, const double&
 		}
 		case Attack:
 		{
-			if (inAmp < m_threshold)
-			{
-		
+			if (inAmp < m_threshold) {
 				m_times.at(c) = time;
 				phase = Release;
-				break;
 			}
-
-			const double fAtk = (time - m_times.at(c)) / m_attack;
-
-			if (fAtk < 1)
-			{
-				out = target - (delta * fAtk);
-			}
-			else
-			{
-				out = target;
-				phase = Active;
+			else {
+				const double fAtk = (time - m_times.at(c)) / m_attack;
+				if (fAtk < 1) {
+					out = in + (target - in) * fAtk;
+				}
+				else {
+					out = target;
+					phase = Active;
+				}
 			}
 			break;
 		}
 		case Active:
 		{
-			if (inAmp > m_threshold)
-			{
+			if (inAmp > m_threshold) {
 				out = target;
 			}
-			else
-			{
+			else {
 				m_times.at(c) = time;
 				phase = Release;
 			}
@@ -77,30 +69,25 @@ void CCompressor::Process(const double* frameIn, double* frameOut, const double&
 		}
 		case Release:
 		{
-			if (inAmp > m_threshold)
-			{
+			if (inAmp > m_threshold) {
 				m_times.at(c) = time;
 				phase = Attack;
-				break;
 			}
-
-			const double fRls = (time - m_times.at(c)) / m_attack;
-
-			if (fRls < 1)
-			{
-				out = in + (delta * fRls);
-			}
-			else
-			{
-				out = in;
-				phase = Hold;
+			else {
+				const double fRls = (time - m_times.at(c)) / m_release;
+				if (fRls < 1) {
+					out = target + (in - target) * (1 - fRls);
+				}
+				else {
+					out = in;
+					phase = Hold;
+				}
 			}
 			break;
 		}
 		}
-
 		frameOut[c] = out;
-		m_stages[c] = phase;
+		m_stages.at(c) = phase;
 	}
 }
 
