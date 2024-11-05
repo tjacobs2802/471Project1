@@ -3,17 +3,7 @@
         <flange id="flange1" rate="0.25" amount="1" phase="0" feedback="0.5" mix="0.5"/>
     </effects>
     <instrument instrument="ToneInstrument" effect="flange1">
-        <note measure="0" beat="1" duration="4.0" freq="440"/> <!-- A4 -->
-        <note measure="1" beat="1" duration="4.0" freq="466.16"/> <!-- A#4/Bb4 -->
-        <note measure="2" beat="1" duration="4.0" freq="493.88"/> <!-- B4 -->
-        <note measure="3" beat="1" duration="4.0" freq="523.25"/> <!-- C5 -->
-        <note measure="4" beat="1" duration="4.0" freq="554.37"/> <!-- C#5/Db5 -->
-        <note measure="5" beat="1" duration="4.0" freq="587.33"/> <!-- D5 -->
-        <note measure="6" beat="1" duration="4.0" freq="622.25"/> <!-- D#5/Eb5 -->
-        <note measure="7" beat="1" duration="4.0" freq="659.25"/> <!-- E5 -->
-        <note measure="8" beat="1" duration="4.0" freq="698.46"/> <!-- F5 -->
-        <note measure="9" beat="1" duration="4.0" freq="739.99"/> <!-- F#5/Gb5 -->
-        <note measure="10" beat="1" duration="4.0" freq="783.99"/> <!-- G5 -->
-        <note measure="11" beat="1" duration="4.0" freq="830.61"/> <!-- G#5/Ab5 -->
+        <note measure="0" beat="1" duration="10.0" freq="440"/> <!-- A4 -->
+        <note measure="1" beat="1" duration="10.0" freq="523.25"/> <!-- C5 -->
     </instrument>
 </score>

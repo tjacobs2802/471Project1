@@ -3,6 +3,10 @@
 #include <cmath>
 #include <deque>
 
+#ifndef M_PI 
+#define M_PI 3.14159265358979323846 
+#endif
+
 std::deque<double> m_frameHistory;
 
 CFlange::CFlange(int channels, double sampleRate, double samplePeriod) : CEffect(channels, sampleRate, samplePeriod)
@@ -10,11 +14,9 @@ CFlange::CFlange(int channels, double sampleRate, double samplePeriod) : CEffect
 	m_phase = 0;
 	m_frequency = 0.25;
 	m_amplitude = 1;
-
-	Reset();
-
 	m_feedback = 0.5;
 	m_wetness = 0.8;
+	Reset();
 }
 
 CFlange::~CFlange()
@@ -24,9 +26,9 @@ CFlange::~CFlange()
 
 void CFlange::Process(const double* frameIn, double* frameOut, const double& time)
 {
-	const double modulation = sin(m_phase * 2 * PI);
+	const double modulation = sin(m_phase * 2 * M_PI);
 	m_phase += m_frequency * m_samplePeriod;
-	if (m_phase > 2 * PI) m_phase -= 2 * PI;
+	if (m_phase > 2 * M_PI) m_phase -= 2 * M_PI;
 
 	int delay = int((0.005 + m_amplitude * (modulation + 1)/2) * m_sampleRate);
 
@@ -35,7 +37,7 @@ void CFlange::Process(const double* frameIn, double* frameOut, const double& tim
 	{
 		double delayedSample = (m_frameHistory.size() > delay * m_channels)
 			? m_frameHistory[m_frameHistory.size() - delay * m_channels]
-			: frameIn[i];
+			: 0;
 
 		m_frameHistory.push_back(frameIn[i] + delayedSample * m_feedback);
 

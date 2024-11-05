@@ -19,10 +19,10 @@ private:
 	std::vector<Phase> m_phases;
 
 	std::vector<double> m_times;
-	double m_threshold = 0.5;
-	double m_attack = 0.1;
-	double m_hold = 0.2;
-	double m_release = 0.2;
+	double m_threshold;
+	double m_attack;
+	double m_hold;
+	double m_release;
 
 
 

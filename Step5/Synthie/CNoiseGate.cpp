@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CNoiseGate.h"
 
-CNoiseGate::CNoiseGate(int channels, double sampleRate, double samplePeriod) : CEffect(channels, sampleRate, samplePeriod)
+CNoiseGate::CNoiseGate(int channels, double sampleRate, double samplePeriod) : CEffect(channels, sampleRate, samplePeriod), m_threshold(0.5), m_attack(0.1), m_hold(0.2), m_release(0.2)
 {
 	m_phases = std::vector<Phase>(m_channels, Open);
 	m_times = std::vector<double>(m_channels, 0);
@@ -74,46 +74,33 @@ void CNoiseGate::Process(const double* frameIn, double* frameOut, const double& 
 		}
 		case Hold:
 		{
+			frameOut[c] = frameIn[c];
 			if (frameIn[c] >= m_threshold)
 			{
-				frameOut[c] = frameIn[c];
 				m_phases.at(c) = Open;
 			}
-			else
+			else if (time - m_times[c] >= m_hold)
 			{
-				frameOut[c] = frameIn[c];
-
-				if (time - m_times.at(c) >= m_hold)
-				{
-					m_phases.at(c) = Release;
-					m_times.at(c) = time;
-				}
+				m_phases.at(c) = Release;
+				m_times.at(c) = time;
 			}
 			break;
 		}
 		case Release:
 		{
-			if (frameIn[c] >= m_threshold)
+			const double fRls = (time - m_times.at(c)) / m_release;
+
+			if (fRls >= 1)
 			{
-				frameOut[c] = frameIn[c];
-				m_phases.at(c) = Open;
+				m_phases.at(c) = Closed;
+				frameOut[c] = 0;
 			}
 			else
 			{
-				const double fRls = (time - m_times.at(c)) / m_release;
-
-				if (fRls >= 1)
-				{
-					m_phases.at(c) = Closed;
-					frameOut[c] = 0;
-				}
-				else
-				{
-					frameOut[c] = frameIn[c] * (1 - fRls);
-				}
+				frameOut[c] = frameIn[c] * (1 - fRls);
 			}
-			break;
 		}
+		break;
 		}
 	}
 }
