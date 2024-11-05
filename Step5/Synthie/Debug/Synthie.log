@@ -1,6 +1,6 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  CNoiseGate.cpp
+  CPianoInstrument.cpp
   Generating Code...
   Skipping... (no relevant changes detected)
   Synthesizer.cpp
-  Synthie.vcxproj -> C:\Users\Julia Bishop\Desktop\471Project1\Step5\Debug\Synthie.exe
+  Synthie.vcxproj -> C:\Users\tjaco\source\repos\cse471\Project1\Step5\Debug\Synthie.exe

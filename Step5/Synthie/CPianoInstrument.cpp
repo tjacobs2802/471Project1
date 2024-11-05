@@ -30,6 +30,14 @@ bool CPianoInstrument::Generate() {
         m_time += GetSamplePeriod();
         return true;
     }
+    else if (m_sampleIndex < m_currentSample.size() + m_pedalNoiseSample.size()) {
+        size_t pedalIndex = m_sampleIndex - m_currentSample.size();
+        m_frame[0] = m_pedalNoiseSample[pedalIndex]; // Assuming mono samples
+        m_frame[1] = m_pedalNoiseSample[pedalIndex];
+        m_sampleIndex++;
+        m_time += GetSamplePeriod();
+        return true;
+    }
     return false;
 }
 
@@ -58,13 +66,17 @@ void CPianoInstrument::SetNote(CNote* note) {
 			std::wstring pianoName = value.bstrVal;
             LoadSample(pianoName);
         }
+        else if (name == "pedal") {  // Check for pedal noise
+            std::wstring pedalNoiseName = value.bstrVal;
+            LoadSample(pedalNoiseName, true);
+        }
         
 		m_sampleIndex = 0;  // Reset the sample index
     }
 }
 
 // Function to load a sample file into the m_samples map
-void CPianoInstrument::LoadSample(const std::wstring& pianoName) {
+void CPianoInstrument::LoadSample(const std::wstring& pianoName, bool isPedalNoise) {
     // Construct the file path from the drum name
     std::wstring path = L"../media/CompletePiano/" + pianoName + L".wav";
 
@@ -98,6 +110,10 @@ void CPianoInstrument::LoadSample(const std::wstring& pianoName) {
         samples[ndx++] = frame[1] / 32768.0;  // Right
     }
 
-    // Assign the loaded samples to m_currentSample
-    m_currentSample = samples;
+    if (isPedalNoise) {
+        m_pedalNoiseSample = samples;
+    }
+    else {
+        m_currentSample = samples;
+    }
 }
