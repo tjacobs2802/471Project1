@@ -1,6 +1,3 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  CPianoInstrument.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  Synthesizer.cpp
-  Synthie.vcxproj -> C:\Users\tjaco\source\repos\cse471\Project1\Step5\Debug\Synthie.exe
+  WaveTable.cpp
+  Synthie.vcxproj -> \\Mac\Home\Desktop\471Project1\Step5\Debug\Synthie.exe

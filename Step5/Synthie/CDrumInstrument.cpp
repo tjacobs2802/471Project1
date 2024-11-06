@@ -16,14 +16,23 @@ void CDrumInstrument::Start() {
 
     m_ar.SetSource(&m_sinewave);
     m_ar.SetSampleRate(GetSampleRate());
+
+    m_ar.SetDuration(m_duration); // Set the envelope duration
+    m_ar.SetAttack(0.05); // Set the attack phase duration (adjust as needed)
+    m_ar.SetRelease(0.05);
+
     m_ar.Start();
 }
 
 bool CDrumInstrument::Generate() {
     if (m_sampleIndex < m_currentSample.size()) {
+
+        m_ar.Generate();
+        double envelopeValue = m_ar.GetEnvelope();
+
         // Output the current sample to both audio channels
-        m_frame[0] = m_currentSample[m_sampleIndex];  // Left channel
-        m_frame[1] = m_currentSample[m_sampleIndex];  // Right channel
+        m_frame[0] = m_currentSample[m_sampleIndex] * envelopeValue;  // Left channel
+        m_frame[1] = m_currentSample[m_sampleIndex] * envelopeValue;  // Right channel
         ++m_sampleIndex;  // Move to the next sample
         m_time += GetSamplePeriod();  // Update time
 
