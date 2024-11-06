@@ -12,8 +12,8 @@ CWavetable::CWavetable()
 
 void CWavetable::Start()
 {
-    //m_waveform.SetSampleRate(GetSampleRate());
-    //m_waveform.Start();
+    m_waveform.SetSampleRate(GetSampleRate());
+    m_waveform.Start();
     m_time = 0;
 
     // Tell the AR object it gets its samples from the waveform object
