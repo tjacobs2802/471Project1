@@ -23,8 +23,8 @@ public:
 
 public:
 
-	virtual void Process(const double* frameIn, double* frameOut, const double& time);
-	virtual void XmlLoadAttribute(const ATL::CComBSTR& name, ATL::CComVariant& value);
+	virtual void Process(const double* frameIn, double* frameOut, const double& time) override;
+	virtual void XmlLoadAttribute(const ATL::CComBSTR& name, ATL::CComVariant& value) override;
 
 	void Reset() override;
 };

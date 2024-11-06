@@ -68,6 +68,7 @@ bool CSynthesizer::Generate(double * frame)
 	m_time += GetSamplePeriod();
 	return m_time < 5;*/
 
+
 	//
 	// Phase 1: Determine if any notes need to be played.
 	//
@@ -88,11 +89,6 @@ bool CSynthesizer::Generate(double * frame)
 		if (note->Measure() == m_measure && note->Beat() > m_beat)
 			break;
 
-		//
-		// Play the note!
-		//
-
-		// Create the instrument object
 		CInstrument *instrument = NULL;
 		if (note->Instrument() == L"ToneInstrument")
 		{
@@ -119,11 +115,7 @@ bool CSynthesizer::Generate(double * frame)
 			}
 			m_instruments.push_back(instrument);
 		}
-
-
 		m_currentNote++;
-
-
 	}
 	//
 	// Phase 2: Clear all channels to silence 
@@ -379,7 +371,6 @@ void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 		}
 	}
 
-	std::wcout << L"Instrument: " << instrument << L", Effect: " << effect << L"\n";
 
 	CComPtr<IXMLDOMNode> node;
 	xml->get_firstChild(&node);

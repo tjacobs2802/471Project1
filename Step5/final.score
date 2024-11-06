@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="120" beatspermeasure="4">
+
+   <!-- Drum Instrument -->
+   <instrument instrument="DrumInstrument">
+      <note measure="1" beat="1" duration="0.5" drum="kick1"/>
+      <note measure="1" beat="2" duration="0.5" drum="snare1"/>
+      <note measure="1" beat="3" duration="0.5" drum="kick1"/>
+      <note measure="1" beat="4" duration="0.5" drum="highhat1"/>
+      
+      <note measure="2" beat="1" duration="0.5" drum="kick1"/>
+      <note measure="2" beat="2" duration="0.5" drum="snare1"/>
+      <note measure="2" beat="3" duration="0.5" drum="kick2"/>
+      <note measure="2" beat="4" duration="0.5" drum="highhat2"/>
+      
+      <!-- Additional drum pattern variation -->
+      <note measure="3" beat="1" duration="0.25" drum="kick1"/>
+      <note measure="3" beat="1.5" duration="0.25" drum="snare2"/>
+      <note measure="3" beat="2" duration="0.25" drum="highhat2"/>
+      <note measure="3" beat="2.5" duration="0.25" drum="snare1"/>
+      <note measure="3" beat="3" duration="0.5" drum="kick2"/>
+      <note measure="3" beat="4" duration="0.5" drum="snare1"/>
+      
+      <effect type="reverb" start="measure 3" end="measure 6"/>
+   </instrument>
+
+   <!-- Tone Instrument -->
+   <instrument instrument="ToneInstrument">
+      <note measure="1" beat="1" duration="0.25" note="C4"/>
+      <note measure="1" beat="1.25" duration="0.25" note="E4"/>
+      <note measure="1" beat="1.5" duration="0.25" note="G4"/>
+      <note measure="1" beat="1.75" duration="0.25" note="A4"/>
+      
+      <note measure="1" beat="2" duration="0.25" note="C5"/>
+      <note measure="1" beat="2.25" duration="0.25" note="E5"/>
+      <note measure="1" beat="2.5" duration="0.25" note="G5"/>
+      <note measure="1" beat="2.75" duration="0.25" note="A5"/>
+      
+      <note measure="2" beat="1" duration="0.5" note="D4"/>
+      <note measure="2" beat="1.5" duration="0.5" note="F4"/>
+      <note measure="2" beat="2" duration="0.5" note="A4"/>
+      <note measure="2" beat="2.5" duration="0.5" note="C5"/>
+      
+      <effect type="chorus" start="measure 2" end="measure 4"/>
+   </instrument>
+
+   <!-- WaveTable Instrument -->
+   <instrument instrument="WaveTable">
+      <note measure="1" beat="1" duration="0.5" note="C4"/>
+      <note measure="1" beat="1.5" duration="0.5" note="E4"/>
+      <note measure="1" beat="2" duration="0.5" note="G4"/>
+      <note measure="1" beat="2.5" duration="0.5" note="A4"/>
+      
+      <note measure="2" beat="1" duration="0.5" note="F4"/>
+      <note measure="2" beat="1.5" duration="0.5" note="A4"/>
+      <note measure="2" beat="2" duration="0.5" note="C5"/>
+      <note measure="2" beat="2.5" duration="0.5" note="D5"/>
+      
+      <effect type="flanger" start="measure 2" end="measure 4"/>
+   </instrument>
+
+   <!-- Piano Instrument -->
+   <instrument instrument="PianoInstrument">
+      <note measure="1" beat="1" duration="1" piano="C4s"/>
+      <note measure="1" beat="2" duration="1" piano="G4s"/>
+      <note measure="2" beat="1" duration="2" piano="C5s"/>
+      <note measure="2" beat="3" duration="1" piano="E5s"/>
+      
+      <note measure="3" beat="1" duration="1" piano="F4s"/>
+      <note measure="3" beat="2" duration="1" piano="A4s"/>
+      <note measure="3" beat="3" duration="1" piano="C5s"/>
+      <note measure="3" beat="4" duration="1" piano="G4s"/>
+      
+      <note measure="4" beat="1" duration="0.5" piano="D4s"/>
+      <note measure="4" beat="1.5" duration="0.5" piano="F4s"/>
+      <note measure="4" beat="2" duration="1.5" piano="A4s"/>
+      <note measure="4" beat="3.5" duration="0.5" piano="C5s"/>
+      
+      <effect type="compressor" start="measure 3" end="measure 6"/>
+   </instrument>
+
+</score>

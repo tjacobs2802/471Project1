@@ -1,0 +1,32 @@
+<score bpm="120" beatspermeasure="4">
+    <effects>
+        <chorus id="chorus1" rate="1.5" amount="0.5" phase="0" channelOffset="0.25" mix="0.5" delay="0.01"/>
+        <noiseGate id="noiseGate1" threshold="0.5" attack="0.1" hold="0.2" release="0.2"/>
+        <flange id="flange1" rate="0.25" amount="1" phase="0" feedback="0.5" mix="0.5"/>
+        <compressor id="compressor1" threshold="0.5" ratio="4.0" attack="0.1" release="0.2" isUpwards="false"/>
+    </effects>
+    <instrument instrument="ToneInstrument" effect="chorus1">
+        <note measure="0" beat="1" duration="1.0" freq="440"/> <!-- A4 -->
+        <note measure="0" beat="2" duration="1.0" freq="494"/> <!-- B4 -->
+        <note measure="0" beat="3" duration="1.0" freq="523.25"/> <!-- C5 -->
+        <note measure="0" beat="4" duration="1.0" freq="587.33"/> <!-- D5 -->
+    </instrument>
+    <instrument instrument="ToneInstrument" effect="noiseGate1">
+        <note measure="1" beat="1" duration="1.0" freq="659.25" volume="0.6"/> <!-- E5 -->
+        <note measure="1" beat="2" duration="1.0" freq="698.46" volume="0.4"/> <!-- F5 -->
+        <note measure="1" beat="3" duration="1.0" freq="783.99" volume="0.6"/> <!-- G5 -->
+        <note measure="1" beat="4" duration="1.0" freq="880" volume="0.4"/> <!-- A5 -->
+    </instrument>
+    <instrument instrument="ToneInstrument" effect="flange1">
+        <note measure="2" beat="1" duration="1.0" freq="987.77"/> <!-- B5 -->
+        <note measure="2" beat="2" duration="1.0" freq="1046.5"/> <!-- C6 -->
+        <note measure="2" beat="3" duration="1.0" freq="1174.66"/> <!-- D6 -->
+        <note measure="2" beat="4" duration="1.0" freq="1318.51"/> <!-- E6 -->
+    </instrument>
+    <instrument instrument="ToneInstrument" effect="compressor1">
+        <note measure="3" beat="1" duration="1.0" freq="1396.91"/> <!-- F6 -->
+        <note measure="3" beat="2" duration="1.0" freq="1567.98"/> <!-- G6 -->
+        <note measure="3" beat="3" duration="1.0" freq="1760"/> <!-- A6 -->
+        <note measure="3" beat="4" duration="1.0" freq="1975.53"/> <!-- B6 -->
+    </instrument>
+</score>

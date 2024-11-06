@@ -24,8 +24,8 @@ private:
 	std::vector<double> m_times;
 	double m_threshold;
 	double m_ratio;
-	double m_attack = 0.1;
-	double m_release = 0.2;
+	double m_attack = 0.01;
+	double m_release = 0.1;
 	bool m_isUpwards = false;
 	double m_currentVol = 0;
 private:

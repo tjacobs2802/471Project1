@@ -14,10 +14,12 @@ public:
     virtual void Start() override;
     virtual bool Generate() override;
     virtual void SetNote(CNote* note) override;
-    void LoadSample(const std::wstring& pianoName);
+    void LoadSample(const std::wstring& pianoName, bool isPedalNoise = false);
+
 
 private:
     std::map<int, std::vector<double>> m_samples; // Map MIDI note to audio samples
+    std::vector<double> m_pedalNoiseSample;
     std::vector<double> m_currentSample;
     size_t m_sampleIndex;
     double m_duration;

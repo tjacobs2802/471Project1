@@ -3,17 +3,9 @@
         <chorus id="chorus1" rate="1.5" amount="0.5" phase="0" channelOffset="0.25" mix="0.5" delay="0.01"/>
     </effects>
     <instrument instrument="ToneInstrument" effect="chorus1">
-        <note measure="0" beat="1" duration="2.0" freq="440"/> <!-- A4 -->
-        <note measure="0" beat="3" duration="2.0" freq="523.25"/> <!-- C5 -->
-        <note measure="1" beat="1" duration="2.0" freq="587.33"/> <!-- D5 -->
-        <note measure="1" beat="3" duration="2.0" freq="659.25"/> <!-- E5 -->
-        <note measure="2" beat="1" duration="2.0" freq="698.46"/> <!-- F5 -->
-        <note measure="2" beat="3" duration="2.0" freq="783.99"/> <!-- G5 -->
-        <note measure="3" beat="1" duration="2.0" freq="880"/> <!-- A5 -->
-        <note measure="3" beat="3" duration="2.0" freq="987.77"/> <!-- B5 -->
-        <note measure="4" beat="1" duration="2.0" freq="1046.5"/> <!-- C6 -->
-        <note measure="4" beat="3" duration="2.0" freq="1174.66"/> <!-- D6 -->
-        <note measure="5" beat="1" duration="2.0" freq="1318.51"/> <!-- E6 -->
-        <note measure="5" beat="3" duration="2.0" freq="1396.91"/> <!-- F6 -->
+        <note measure="0" beat="1" duration="4.0" freq="440"/> <!-- A4 -->
+        <note measure="1" beat="1" duration="4.0" freq="523.25"/> <!-- C5 -->
+        <note measure="2" beat="1" duration="4.0" freq="587.33"/> <!-- D5 -->
+        <note measure="3" beat="1" duration="4.0" freq="659.25"/> <!-- E5 -->
     </instrument>
 </score>

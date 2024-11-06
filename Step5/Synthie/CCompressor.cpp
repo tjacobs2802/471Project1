@@ -26,7 +26,7 @@ void CCompressor::Process(const double* frameIn, double* frameOut, const double&
 		switch (phase)
 		{
 		case Hold:
-		{
+		
 			if (inAmp < m_threshold)
 			{
 				out = in;
@@ -37,9 +37,9 @@ void CCompressor::Process(const double* frameIn, double* frameOut, const double&
 				phase = Attack;
 			}
 			break;
-		}
+		
 		case Attack:
-		{
+		
 			if (inAmp < m_threshold) {
 				m_times.at(c) = time;
 				phase = Release;
@@ -55,9 +55,9 @@ void CCompressor::Process(const double* frameIn, double* frameOut, const double&
 				}
 			}
 			break;
-		}
+		
 		case Active:
-		{
+		
 			if (inAmp > m_threshold) {
 				out = target;
 			}
@@ -66,9 +66,9 @@ void CCompressor::Process(const double* frameIn, double* frameOut, const double&
 				phase = Release;
 			}
 			break;
-		}
+		
 		case Release:
-		{
+		
 			if (inAmp > m_threshold) {
 				m_times.at(c) = time;
 				phase = Attack;
@@ -85,7 +85,7 @@ void CCompressor::Process(const double* frameIn, double* frameOut, const double&
 			}
 			break;
 		}
-		}
+		
 		frameOut[c] = out;
 		m_stages.at(c) = phase;
 	}
