@@ -24,7 +24,7 @@
         <flange id="flange1" rate="0.25" amount="1" phase="0" feedback="0.5" mix="0.5"/>
     </effects>
     <instrument instrument="ToneInstrument" effect="flange1">
-        <note measure="0" beat="1" duration="2.0" freq="440"/> 
+        <note measure="0" beat="1" duration="5.0" freq="440"/> 
     </instrument>
 </score>
 
