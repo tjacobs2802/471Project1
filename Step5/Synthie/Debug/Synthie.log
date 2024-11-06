@@ -1,3 +1,13 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  CCompressor.cpp
-  Synthie.vcxproj -> C:\Users\Julia Bishop\Desktop\471Project1\Step5\Debug\Synthie.exe
+  Waveform.cpp
+C:\Users\aidan\source\repos\Project1\Step5\Synthie\Waveform.cpp(16,23): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/Waveform.cpp')
+  
+C:\Users\aidan\source\repos\Project1\Step5\Synthie\Waveform.cpp(47,24): warning C4018: '>=': signed/unsigned mismatch
+  (compiling source file '/Waveform.cpp')
+  
+  WaveTable.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Synthesizer.cpp
+  Synthie.vcxproj -> C:\Users\aidan\source\repos\Project1\Step5\Debug\Synthie.exe
