@@ -13,6 +13,7 @@ public:
     virtual void Start();
     virtual bool Generate();
 
+    void SetNoteSample(const CComVariant& value, bool isGlissando);
     void SetNote(CNote* note);
 
 private:

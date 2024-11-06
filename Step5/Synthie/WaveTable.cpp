@@ -5,85 +5,97 @@
 
 using namespace std;
 
+// Constructor - Initialize default values if needed
 CWavetable::CWavetable()
 {
-    // Initialization if needed
 }
 
+// Start() - Initializes and starts the waveform and AR components
 void CWavetable::Start()
 {
+    // Configure waveform and AR components with sample rate and duration
     m_waveform.SetSampleRate(GetSampleRate());
     m_waveform.Start();
     m_time = 0;
 
-    // Tell the AR object it gets its samples from the waveform object
+    // Link AR object to waveform and configure AR parameters
     m_ar.SetSource(&m_waveform);
     m_ar.SetSampleRate(GetSampleRate());
-
-    // Change the AR object's parameters
     m_ar.SetAttack(m_waveform.Attack());
     m_ar.SetRelease(m_waveform.Release());
 
-    // Start the AR object
+    // Start AR for the synthesis chain
     m_ar.Start();
 }
 
+// Generate() - Generates audio samples for each frame
 bool CWavetable::Generate()
 {
-    // Tell the component to generate an audio sample
+    // Generate audio sample from the waveform and AR
     m_waveform.Generate();
     bool valid = m_ar.Generate();
 
-    // Read the component's sample and make it our resulting frame
+    // Capture generated sample into output frame
     m_frame[0] = m_ar.Frame(0);
     m_frame[1] = m_ar.Frame(1);
 
     // Update time
     m_time += GetSamplePeriod();
 
-    // We return true until the time reaches the duration
+    // Return true until the duration is reached
     return valid;
 }
 
+// SetNote() - Sets note parameters from an XML note node
 void CWavetable::SetNote(CNote* note)
 {
-    // Get a list of all attribute nodes and the length of that list
+    // Retrieve attributes from the XML node
     CComPtr<IXMLDOMNamedNodeMap> attributes;
     note->Node()->get_attributes(&attributes);
     long len;
     attributes->get_length(&len);
 
-    // Loop over the list of attributes
+    // Process each attribute
     for (int i = 0; i < len; i++)
     {
-        // Get attribute i
         CComPtr<IXMLDOMNode> attrib;
         attributes->get_item(i, &attrib);
 
-        // Get the name of the attribute
+        // Get attribute name and value
         CComBSTR name;
         attrib->get_nodeName(&name);
-
-        // Get the value of the attribute
         CComVariant value;
         attrib->get_nodeValue(&value);
 
+        // Process based on attribute name
         if (name == "duration")
         {
             value.ChangeType(VT_R8);
-            m_ar.SetDuration((value.dblVal) * (NUM_SECS_IN_MINUTE / m_bpm));
-            m_waveform.SetDuration((value.dblVal) * (NUM_SECS_IN_MINUTE / m_bpm));
+            double durationInSecs = value.dblVal * (NUM_SECS_IN_MINUTE / m_bpm);
+            m_ar.SetDuration(durationInSecs);
+            m_waveform.SetDuration(durationInSecs);
         }
         else if (name == "note")
         {
-            wstring noteName(value.bstrVal, SysStringLen(value.bstrVal));
-            m_waveform.LoadSamp(m_waveform.GetSample(noteName), 0);
-            m_waveform.SetNextNote(99);
+            SetNoteSample(value, /* isGlissando */ false);
         }
         else if (name == "gliss")
         {
-            wstring noteName(value.bstrVal, SysStringLen(value.bstrVal));
-            m_waveform.LoadSamp(m_waveform.GetSample(noteName), 1);
+            SetNoteSample(value, /* isGlissando */ true);
         }
+    }
+}
+
+// Helper function to load sample for a note or glissando
+void CWavetable::SetNoteSample(const CComVariant& value, bool isGlissando)
+{
+    wstring noteName(value.bstrVal, SysStringLen(value.bstrVal));
+    int sampleSlot = isGlissando ? 1 : 0;
+    m_waveform.LoadSamp(m_waveform.GetSample(noteName), sampleSlot);
+
+    // Set next note if this is the primary note (not a glissando)
+    if (!isGlissando)
+    {
+        m_waveform.SetNextNote(99); // 99 as placeholder; adjust logic as needed
     }
 }
