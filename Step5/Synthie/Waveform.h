@@ -16,16 +16,14 @@ public:
     // Initializes waveform parameters for playback
     void Start();
 
-    // Prepares list of audio sample file paths based on expected note names
-    void GetFileList();
-
     // Converts note names and octave numbers into sample IDs for lookup
     int GetSample(std::wstring note);
 
     // Loads audio sample into a lookup table for quick access during synthesis
     void LoadSamp(int noteId, int type);
 
-    void CWaveform::LoadWavetableSample(int noteId, const std::wstring& path);
+	// Loads wavetable sample
+    void LoadWavetableSample(int noteId, const std::wstring& path);
 
 
     // Generates audio samples for the current frame

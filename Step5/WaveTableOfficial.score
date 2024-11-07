@@ -49,11 +49,10 @@
         <note measure="6" beat="4" duration="0.5" note="D3" attack="0.02" release="0.2"/>
 
         <!-- Measure 7 -->
-        <note measure="7" beat="1" duration="0.5" note="C3" attack="0.02" release="0.2"/>
-        <note measure="7" beat="1.5" duration="0.5" note="B2" attack="0.02" release="0.2"/>
-        <note measure="7" beat="2" duration="1" note="A2" gliss="B3" attack="0.02" release="0.5"/>
-        <note measure="7" beat="3.5" duration="0.5" note="G2" attack="0.02" release="0.2"/>
-        <note measure="7" beat="4" duration="0.5" note="F2" attack="0.02" release="0.2"/>
+        <note measure="7" beat="1" duration="1" note="C4" gliss="B4"/>
+        <note measure="7" beat="2" duration="1" note="B4" gliss="C4"/>
+        <note measure="7" beat="3" duration="1" note="C4" gliss="B4"/>
+        <note measure="7" beat="4" duration="1" note="B4" gliss="A4"/>
 
         <!-- Measure 8 -->
         <note measure="8" beat="1" duration="1" note="D2" gliss="G4" attack="0.02" release="0.5"/>

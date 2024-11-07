@@ -14,13 +14,7 @@ using namespace std;
  */
 CWaveform::CWaveform()
 {
-    //GetFileList();
-
-    //// Initialize the lookup table with empty vectors for each note ID.
-    //for (int i = 0; i < m_fileList.size(); i++)
-    //{
-    //    m_waveFormCache.push_back(vector<short>());
-    //}
+ 
     m_waveFormCache.resize(48);
 }
 
