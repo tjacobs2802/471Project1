@@ -44,6 +44,7 @@ Here is a sample score to demonstrate the wavetable effects attack, release, and
         <note measure="8" beat="4" duration="0.5" note="G2" attack="0.02" release="0.2"/>
     </instrument>
 </score>
+```
 
 **Final Recording:** 
 Listen to the final recording here: (LINK)
