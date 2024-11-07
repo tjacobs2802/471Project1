@@ -1,5 +1,5 @@
 # CSE 471 Project 1: Music Synthesizer
-[Click here for our audio file: ***Sleigh Ride***](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[Click here for our audio file: ***Sleigh Ride***](https://github.com/tjacobs2802/471Project1/blob/main/score/WAVs/Sleigh%20Ride.wav)
 
 ## Group Members
 * Trevor Jacobs - Piano Synthesizer
