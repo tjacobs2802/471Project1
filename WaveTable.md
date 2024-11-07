@@ -14,9 +14,13 @@ Made by **Aidan Baird**
 
 Key features include:
 
-- **Attack and Sustain Waves**: Initial sound followed by a recurring sound.
-- **Pitch**: Allows playback at different rates.
-- **Glissando**: Smooth transition between notes.
+- **Attack and Sustain Waves**: I have an envelope generator with attack and release settings using the m_ar object. The Start function configures the attack and release times by setting       
+                                parameters in m_ar, and Generate calls m_ar.Generate() to apply the envelope to each generated sample.
+
+-  **Pitch**: The pitch is handled via note identification and loading different samples for each note. The GetSample function uses the note’s name and octave to calculate a unique ID, which                   determines the sample loaded for each note.
+
+-  **Glissando**: The Generate function calculates a glissando effect by smoothly interpolating between m_currentNote and m_nextNote, based on glissCoeff. This          
+                  interpolation adjusts pitch over time to create a gliding effect between notes.
 
 ## Sample Score
 Here is a sample score to demonstrate the wavetable effects attack, release, and glissando.
