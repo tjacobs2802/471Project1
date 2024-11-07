@@ -1,5 +1,5 @@
 # Drum Synthesizer
-Owned and developed by: **Gregory Lis
+Owned and developed by: Gregory Lis
 
 The Drum Synthesizer simulates the sounds of a basic drum kit, and has essential drum sounds like bass drum, snare drum, toms, and cymbals. This synthesizer uses noise generation and pitch manipulation for a sound. It supports four main features to enhance sound realism:
 
@@ -59,3 +59,6 @@ Here is a sample score that was used to demo the drums's different sounds
 
 
 ```
+
+**Final Recording:**  
+Listen to the final recording here: [LINK](https://github.com/tjacobs2802/471Project1/blob/main/score/WAVs/WaveTable%20FINAL.wav)
