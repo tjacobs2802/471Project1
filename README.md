@@ -15,7 +15,7 @@
 
 ## Project Information
 ### Score File
- To display all of the individual parts of the Music Synthesizer, we made a feature piece: ***Dazed and Confused***. Each note
+ To display all of the individual parts of the Music Synthesizer, we made a feature piece: ***Sleigh Ride***. Each note
  is paird with an instrument, and each instrument might be paired with an effect. Here is the xml for our piece.
 
 ```xml
