@@ -14,7 +14,8 @@ Made by **Aidan Baird**
 
 Key features include:
 
-- **Attack and Sustain Waves**: I have an envelope generator with attack and release settings using the m_ar object. The Start function configures the attack and release times by setting    parameters in m_ar, and Generate calls m_ar.Generate() to apply the envelope to each generated sample.
+- **Attack and Sustain Waves + Loop**: I have an envelope generator with attack and release settings using the m_ar object. The Start function configures the attack and release times by setting    parameters in m_ar, and Generate calls m_ar.Generate() to apply the envelope to each generated sample. The code includes logic to check LoopStart and LoopEnd times and reset the m_time and 
+  m_frameIndex when reaching LoopEnd. Allowing a sample to repeat until the duration elapses.
 
 -  **Pitch**: The pitch is handled via note identification and loading different samples for each note. The GetSample function uses the note’s name and octave to calculate a unique ID, which                   determines the sample loaded for each note.
 
