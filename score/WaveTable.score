@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="120" beatspermeasure="4">
+    <instrument instrument="WaveTable">
+        <!-- Measure 1 -->
+        <note measure="1" beat="1" duration="0.5" note="C4" attack="0.02" release="0.2"/>
+        <note measure="1" beat="1.5" duration="0.5" note="G4" attack="0.02" release="0.2"/>
+        <note measure="1" beat="2" duration="0.5" note="E4" attack="0.02" release="0.2"/>
+        <note measure="1" beat="2.5" duration="1" note="D#4" attack="0.02" release="0.5"/>
+        <note measure="1" beat="3.5" duration="0.5" note="A4" attack="0.02" release="0.2"/>
+        <note measure="1" beat="4" duration="0.5" note="C#4" attack="0.02" release="0.2"/>
+
+        <!-- Measure 2 -->
+        <note measure="2" beat="1" duration="0.5" note="E4" attack="0.02" release="0.2"/>
+        <note measure="2" beat="1.5" duration="0.5" note="G#4" attack="0.02" release="0.2"/>
+        <note measure="2" beat="2" duration="0.5" note="B4" attack="0.02" release="0.2"/>
+        <note measure="2" beat="2.5" duration="1" note="C4" attack="0.02" release="0.5"/>
+        <note measure="2" beat="3.5" duration="0.5" note="D4" attack="0.02" release="0.2"/>
+        <note measure="2" beat="4" duration="0.5" note="F4" attack="0.02" release="0.2"/>
+
+        <!-- Measure 3 -->
+        <note measure="3" beat="1" duration="1" note="G4" gliss="D5" attack="0.02" release="0.5"/>
+        <note measure="3" beat="2" duration="0.5" note="F#4" attack="0.02" release="0.2"/>
+        <note measure="3" beat="2.5" duration="0.5" note="E4" attack="0.02" release="0.2"/>
+        <note measure="3" beat="3" duration="0.5" note="D4" attack="0.02" release="0.2"/>
+        <note measure="3" beat="3.5" duration="0.5" note="C4" attack="0.02" release="0.2"/>
+        <note measure="3" beat="4" duration="0.5" note="A3" attack="0.02" release="0.2"/>
+
+        <!-- Measure 4 -->
+        <note measure="4" beat="1" duration="0.5" note="F4" attack="0.02" release="0.2"/>
+        <note measure="4" beat="1.5" duration="0.5" note="E4" attack="0.02" release="0.2"/>
+        <note measure="4" beat="2" duration="1" note="D4" attack="0.02" release="0.5" gliss="C4"/>
+        <note measure="4" beat="3.5" duration="0.5" note="C4" attack="0.02" release="0.2"/>
+        <note measure="4" beat="4" duration="0.5" note="B3" attack="0.02" release="0.2"/>
+
+        <!-- Measure 5 -->
+        <note measure="5" beat="1" duration="0.5" note="A3" attack="0.02" release="0.2"/>
+        <note measure="5" beat="1.5" duration="0.5" note="G3" attack="0.02" release="0.2"/>
+        <note measure="5" beat="2" duration="0.5" note="F#3" attack="0.02" release="0.2"/>
+        <note measure="5" beat="2.5" duration="1" note="F4" attack="0.02" release="0.5"/>
+        <note measure="5" beat="3.5" duration="0.5" note="E4" attack="0.02" release="0.2"/>
+        <note measure="5" beat="4" duration="0.5" note="D4" attack="0.02" release="0.2"/>
+
+        <!-- Measure 6 -->
+        <note measure="6" beat="1" duration="1" note="B3" gliss="C#4" attack="0.02" release="0.5"/>
+        <note measure="6" beat="2" duration="0.5" note="A3" attack="0.02" release="0.2"/>
+        <note measure="6" beat="2.5" duration="0.5" note="G3" attack="0.02" release="0.2"/>
+        <note measure="6" beat="3" duration="0.5" note="F3" attack="0.02" release="0.2"/>
+        <note measure="6" beat="3.5" duration="0.5" note="E3" attack="0.02" release="0.2"/>
+        <note measure="6" beat="4" duration="0.5" note="D3" attack="0.02" release="0.2"/>
+
+        <!-- Measure 7 -->
+        <note measure="7" beat="1" duration="1" note="C4" gliss="B4"/>
+        <note measure="7" beat="2" duration="1" note="B4" gliss="C4"/>
+        <note measure="7" beat="3" duration="1" note="C4" gliss="B4"/>
+        <note measure="7" beat="4" duration="1" note="B4" gliss="A4"/>
+
+        <!-- Measure 8 -->
+        <note measure="8" beat="1" duration="1" note="D2" gliss="G4" attack="0.02" release="0.5"/>
+        <note measure="8" beat="2" duration="0.5" note="C2" attack="0.02" release="0.2"/>
+        <note measure="8" beat="2.5" duration="1" note="B2" gliss="C4" attack="0.02" release="0.5"/>
+        <note measure="8" beat="3.5" duration="0.5" note="A2" attack="0.02" release="0.2"/>
+        <note measure="8" beat="4" duration="0.5" note="G2" attack="0.02" release="0.2"/>
+    </instrument>
+</score>
