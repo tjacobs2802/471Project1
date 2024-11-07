@@ -50,3 +50,6 @@ Here is a sample score that was used to demo the piano's different capabilities
     </instrument>
 </score>
 ```
+
+**Final Recording:**  
+Listen to the final recording here: [LINK](https://github.com/tjacobs2802/471Project1/blob/main/score/WAVs/)
