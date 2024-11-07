@@ -61,4 +61,4 @@ Here is a sample score that was used to demo the drums's different sounds
 ```
 
 **Final Recording:**  
-Listen to the final recording here: [LINK](https://github.com/tjacobs2802/471Project1/blob/main/score/WAVs/WaveTable%20FINAL.wav)
+Listen to the final recording here: [LINK](https://github.com/tjacobs2802/471Project1/blob/06f3e0cb01dd8619b9ce6b207fefd96c9694540f/score/WAVs/drum.wav)
