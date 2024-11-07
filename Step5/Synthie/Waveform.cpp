@@ -2,6 +2,10 @@
 #include "Waveform.h"
 #include "audio/DirSoundSource.h"
 #include <algorithm>
+#include <fstream>
+#include <stdexcept>
+#include <random>
+#include <vector>
 
 using namespace std;
 
@@ -10,13 +14,14 @@ using namespace std;
  */
 CWaveform::CWaveform()
 {
-    GetFileList();
+    //GetFileList();
 
-    // Initialize the lookup table with empty vectors for each note ID.
-    for (int i = 0; i < m_fileList.size(); i++)
-    {
-        m_waveFormCache.push_back(vector<short>());
-    }
+    //// Initialize the lookup table with empty vectors for each note ID.
+    //for (int i = 0; i < m_fileList.size(); i++)
+    //{
+    //    m_waveFormCache.push_back(vector<short>());
+    //}
+    m_waveFormCache.resize(48);
 }
 
 /**
@@ -27,31 +32,6 @@ void CWaveform::Start()
     m_time = 0;
     m_loopNum = 0;
     m_amp = 0.5;
-}
-
-
-/**
- * GetFileList: Populates m_fileList with paths to WAV files.
- */
-void CWaveform::GetFileList() {
-    m_fileList.clear();
-    std::wstring pathPrefix = L"../WaveSamples/";
-
-    // Iterate through notes and octaves, constructing filenames
-    for (int octave = 1; octave <= 4; ++octave) {
-        for (const auto& note : m_noteList) {
-            std::wstring filename = pathPrefix + L"wavetable_" + note + std::to_wstring(octave) + L".wav";
-            int noteId = GetSample(note + std::to_wstring(octave));
-
-            // Resize m_fileList to accommodate the new note ID, if needed
-            if (noteId >= m_fileList.size()) {
-                m_fileList.resize(noteId + 1);
-            }
-
-            // Store the filename at the position matching the note ID
-            m_fileList[noteId] = filename;
-        }
-    }
 }
 
 /**
@@ -65,38 +45,6 @@ int CWaveform::GetSample(std::wstring note)
         ? distance(m_noteListSharp.begin(), find(m_noteListSharp.begin(), m_noteListSharp.end(), name))
         : distance(m_noteList.begin(), find(m_noteList.begin(), m_noteList.end(), name));
     return (12 * (octave - 1)) + noteNum;
-}
-
-/**
- * LoadSamp: Loads audio sample data for a specified note ID into the lookup table.
- */
-void CWaveform::LoadSamp(int noteId, int type)
-{
-    if ((noteId < 0) || (noteId > 47))
-        return;
-
-    // Skip loading if the sample has already been loaded
-    if (m_waveFormCache[noteId].size() > 0)
-        return;
-
-    // Set member variables based on type parameter (current vs. next note)
-    if (type == 0) {
-        m_currentNote = noteId;
-    } else if (type == 1) {
-        m_nextNote = noteId;
-    }
-
-    CDirSoundSource audioin;
-    if (!audioin.Open(m_fileList[noteId].c_str()))
-        return;
-
-    // Read each frame of audio and store it in the lookup table
-    for (int i = 0; i < audioin.NumSampleFrames(); i++) {
-        short audio[2];
-        audioin.ReadFrame(audio);
-        m_waveFormCache[noteId].push_back(audio[0]);
-    }
-    audioin.Close();
 }
 
 /**
@@ -127,4 +75,58 @@ bool CWaveform::Generate()
         m_loopNum++;
     }
     return true;
+}
+
+
+void CWaveform::LoadWavetableSample(int noteId, const std::wstring& path)
+{
+    std::ifstream file(path, std::ios::binary);
+    if (!file) {
+        throw std::runtime_error("Failed to open wavetable file");
+    }
+
+    // Validate WAV header
+    char riff[4];
+    file.read(riff, 4);
+    if (std::string(riff, 4) != "RIFF") {
+        throw std::runtime_error("Invalid WAV file");
+    }
+
+    // Seek to the data size in the header
+    file.seekg(40, std::ios::beg);
+    uint32_t dataSize = 0;
+    file.read(reinterpret_cast<char*>(&dataSize), sizeof(dataSize));
+
+    // Calculate the number of frames (assuming stereo, 16-bit format)
+    size_t numFrames = dataSize / (sizeof(int16_t) * 2);
+    m_waveFormCache[noteId].resize(numFrames * 2);
+
+    // Read each frame, convert to double, and normalize
+    for (size_t i = 0; i < numFrames; ++i) {
+        int16_t frame[2];  // Stereo frame
+        file.read(reinterpret_cast<char*>(frame), sizeof(frame));
+
+        // Store normalized samples in the cache
+        m_waveFormCache[noteId][i * 2] = frame[0];  // Left
+        m_waveFormCache[noteId][i * 2 + 1] = frame[1];  // Right
+    }
+    file.close();
+}
+
+void CWaveform::LoadSamp(int noteId, int type)
+{
+    if (noteId < 0 || noteId > 47 || !m_waveFormCache[noteId].empty())
+        return;
+
+    if (type == 0) {
+        m_currentNote = noteId;
+    }
+    else if (type == 1) {
+        m_nextNote = noteId;
+    }
+    std::wstring pathPrefix = L"../media/WaveSamples/";
+    std::wstring noteName = m_noteList[noteId % 12] + std::to_wstring(noteId / 12 + 1); 
+    std::wstring path = pathPrefix + L"wavetable_" + noteName + L".wav";
+
+    LoadWavetableSample(noteId, path);
 }

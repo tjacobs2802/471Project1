@@ -25,6 +25,9 @@ public:
     // Loads audio sample into a lookup table for quick access during synthesis
     void LoadSamp(int noteId, int type);
 
+    void CWaveform::LoadWavetableSample(int noteId, const std::wstring& path);
+
+
     // Generates audio samples for the current frame
     virtual bool Generate();
 

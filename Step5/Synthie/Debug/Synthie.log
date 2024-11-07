@@ -1,6 +1,56 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  stdafx.cpp
+cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
   WaveTable.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
+  Waveform.cpp
+  ToneInstrument.cpp
+  WaveformWnd.cpp
+  WaveformBuffer.cpp
+  Wave.cpp
+  SynthieView.cpp
+  Synthie.cpp
   Synthesizer.cpp
+  SineWave.cpp
+  ProgressDlg.cpp
+  Progress.cpp
+  Notes.cpp
+  Note.cpp
+  MainFrm.cpp
+  Instrument.cpp
+  CPianoInstrument.cpp
+  CNoiseGate.cpp
+  CFlange.cpp
+C:\Users\aidan\source\repos\Project1\Step5\Synthie\CFlange.cpp(36,23): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/CFlange.cpp')
+  
+C:\Users\aidan\source\repos\Project1\Step5\Synthie\CFlange.cpp(38,49): warning C4018: '>': signed/unsigned mismatch
+  (compiling source file '/CFlange.cpp')
+  
+C:\Users\aidan\source\repos\Project1\Step5\Synthie\CFlange.cpp(44,29): warning C4018: '>': signed/unsigned mismatch
+  (compiling source file '/CFlange.cpp')
+  
+  CFactory.cpp
+  Generating Code...
+  Compiling...
+  CEffectsManager.cpp
+  CEffect.cpp
+  CDrumInstrument.cpp
+  CCompressor.cpp
+  CChorus.cpp
+C:\Users\aidan\source\repos\Project1\Step5\Synthie\CChorus.cpp(22,26): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/CChorus.cpp')
+  
+C:\Users\aidan\source\repos\Project1\Step5\Synthie\CChorus.cpp(27,26): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/CChorus.cpp')
+  
+C:\Users\aidan\source\repos\Project1\Step5\Synthie\CChorus.cpp(29,32): warning C4018: '<=': signed/unsigned mismatch
+  (compiling source file '/CChorus.cpp')
+  
+  DirSoundStream.cpp
+  DirSoundSource.cpp
+  DirSound.cpp
+  AudioNode.cpp
+  AR.cpp
+  Generating Code...
+AR.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   Synthie.vcxproj -> C:\Users\aidan\source\repos\Project1\Step5\Debug\Synthie.exe
