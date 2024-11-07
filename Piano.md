@@ -29,14 +29,14 @@ Here is a sample score that was used to demo the piano's different capabilities
 <score bpm="60" beatspermeasure="4">
     <instrument instrument="PianoInstrument">
         <!-- Measure 1: G major chord -->
-        <note measure="1" beat="1" duration="4" piano="G3l" pedal="True"/>
-        <note measure="1" beat="1" duration="4" piano="B3l" pedal="True"/>
+        <note measure="1" beat="1" duration="4" piano="G3s" pedal="True"/>
+        <note measure="1" beat="1" duration="4" piano="B3s" pedal="True"/>
         <note measure="1" beat="1" duration="4" piano="D4s" pedal="True"/>
         
         <!-- Measure 2: C major chord -->
         <note measure="2" beat="1" duration="4" piano="C3l" pedal="False"/>
         <note measure="2" beat="1" duration="4" piano="E3l" pedal="False"/>
-        <note measure="2" beat="1" duration="4" piano="G3s" pedal="False"/>
+        <note measure="2" beat="1" duration="4" piano="G3l" pedal="False"/>
         
         <!-- Measure 3: D major chord -->
         <note measure="3" beat="1" duration="4" piano="D3l" pedal="True"/>
@@ -49,6 +49,4 @@ Here is a sample score that was used to demo the piano's different capabilities
         <note measure="4" beat="1" duration="3" piano="D4s" pedal="False"/>
     </instrument>
 </score>
-
-
 ```
