@@ -51,5 +51,5 @@ Here is a sample score to demonstrate the wavetable effects attack, release, and
 ```
 
 **Final Recording:**  
-Listen to the final recording here: [LINK](https://github.com/tjacobs2802/471Project1/main/score/WAVs/WaveTableFINAL.wav)
+Listen to the final recording here: [LINK](https://github.com/tjacobs2802/471Project1/blob/main/score/WAVs/WaveTable%20FINAL.wav)
 
