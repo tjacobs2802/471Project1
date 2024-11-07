@@ -1,4 +1,5 @@
-Wavetable Synthesis by Aidan Baird
+# WaveTable Synthesizer
+Made by **Aidan Baird**
 
  **Wave Playback on Demand**: 
    - Generates audio when an XML request specifies notes for the "wavetable" instrument.
@@ -18,6 +19,8 @@ Key features include:
 - **Pitch**: Allows playback at different rates.
 - **Glissando**: Smooth transition between notes.
 - **Dynamic Filtering**: Applies filters to modify sound.
+
+-xml goes here
 
 **Final Recording:** 
 Listen to the final recording here: (LINK)
